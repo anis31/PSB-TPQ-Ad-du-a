@@ -26,7 +26,7 @@ class CreatePendaftaranTable extends Migration
             $table->text('alamat');
             $table->string('nama_ortu');
             $table->string('nomor_hp');
-            $table->string('photo');
+            $table->string('photo')->nullable();
             $table->timestamps();
         });
     }
