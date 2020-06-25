@@ -39,7 +39,7 @@
                                 <ul class="list-unstyled list-justify">
                                     <li>Tempat Lahir <span>{{$daftar->tempat_lahir}}</span></li>
                                     <li>Tanggal Lahir <span>{{$daftar->tgl_lahir}}</span></li>
-                                    <li>Umur <span>{{$daftar->umur}}</span></li>
+                                    <li>Umur <span>{{$daftar->umur}} tahun</span></li>
                                     <li>Jenis Kelamin <span>{{$daftar->jenis_kelamin}}</span></li>
                                     <li>Nama Orang Tua <span>{{$daftar->nama_ortu}}</span></li>
                                     <li>No. HP <span>{{$daftar->nomor_hp}}</span></li>
