@@ -12,6 +12,6 @@ class Daftar extends Model
     public function relasi_wawancara($id)
     {
         $relasi_wawancara = Daftar::find($id)->wawancara;
-        return $this->hasOne('App\Wawancara', 'foreign_key');
+        return $this->hasOne('App\Wawancara');
     }
 }

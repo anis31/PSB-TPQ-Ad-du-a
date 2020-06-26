@@ -9,6 +9,9 @@
                     <div class="panel">
 								<div class="panel-heading">
                                     <h3 class="panel-title">Data Wawancara Santri Baru</h3>
+                                    <div class="right">
+                                        <button type="button" class="btn-create" data-toggle="modal" data-target="#exampleModal"><i class="lnr lnr-plus-circle"></i></button>
+                                    </div>
                                 </div>
                                 <div class="panel-body">
                                 <div class="table-responsive">
@@ -16,6 +19,7 @@
                                         <thead>
                                             <tr>
                                                 <th>Nama Lengkap</th>
+                                                <th>Jenis Kelamin</th>
                                                 <th>Hafalan</th>
                                                 <th>Surah Yg Dihafal</th>
                                                 <th>Tartil</th>
@@ -26,7 +30,8 @@
                                         <tbody>
                                         @foreach ($data_wawancara as $wawancara)
                                         <tr>
-                                            <td>{{dd($wawancara->pendaftaran_id)}}</td>
+                                            <td>{{$wawancara->relasi_daftar['nama']}}</td>
+                                            <td>{{$wawancara->relasi_daftar['jenis_kelamin']}}</td>
                                             <td>{{$wawancara->hafalan}}</td>
                                             <td>{{$wawancara->surat_dihafal}}</td>
                                             <td>{{$wawancara->tartil}}</td>
