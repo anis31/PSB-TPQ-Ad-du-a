@@ -60,6 +60,7 @@
 			          <li><a href="/">Home</a></li>
 			          <li><a href="/tentang">Tentang</a></li>
 			          <li><a href="/pendaftaran">Daftar</a></li>
+					  <li><a href="/login">Login</a></li>
 			        </ul>
 			      </nav><!-- #nav-menu-container -->		    		
 		    	</div>

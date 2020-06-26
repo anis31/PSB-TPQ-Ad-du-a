@@ -10,7 +10,7 @@
 							<div id="subPages" class="collapse in" aria-expanded="true" style="">
 								<ul class="nav">
 									<li><a href="/daftar" class="">Form</a></li>
-									<li><a href="/seleksi" class="">Seleksi</a></li>
+									<li><a href="/psb/wawancara" class="">Seleksi</a></li>
 									<li><a href="/dashboard" class="">Pengumuman</a></li>
 								</ul>
 							</div>

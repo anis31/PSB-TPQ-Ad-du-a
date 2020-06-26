@@ -69,14 +69,14 @@
 								<!-- Panel 1 -->
 								<div class="tab-content">
 									<div class="tab-pane fade in active" id="tab-bottom-left1">
-										<form>
+										<form action="">
 											<div class="form-group row">
 												<label class="col-sm-9">Apakah ananda sudah mempunyai hafalan ?</label>
 												<div class="col-sm-3">
 												<select class="form-control">
 													<option datd-display="">pilih...</option>
-													<option value="sudah">Sudah</option>
-													<option value="belum">Belum</option>
+													<option value="Sudah">Sudah</option>
+													<option value="Belum">Belum</option>
 												</select>
 												</div>
 											</div>

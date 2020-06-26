@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Santri;
 use App\Daftar;
+use App\Wawancara;
 
 class DashboardController extends Controller
 {
@@ -28,5 +29,11 @@ class DashboardController extends Controller
     {
         $daftar = Daftar::find($id);
         return view('psb.profil',['daftar' => $daftar]);
+    }
+
+    public function wawancara()
+    {
+        $data_wawancara = Wawancara::all();
+        return view('psb.wawancara',['data_wawancara'=> $data_wawancara]);
     }
 }
