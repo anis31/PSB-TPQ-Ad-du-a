@@ -12,7 +12,7 @@
                                 </div>
                                 <div class="panel-body">
                                 <div class="table-responsive">
-                                    <table class="table project-table">
+                                    <table class="table project-table table-responsive table-hover">
                                         <thead>
                                             <tr>
                                                 <th>Nama Lengkap</th>
@@ -20,16 +20,18 @@
                                                 <th>Surah Yg Dihafal</th>
                                                 <th>Tartil</th>
                                                 <th>Jilid</th>
+                                                <th>Catatan Quran</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                         @foreach ($data_wawancara as $wawancara)
                                         <tr>
-                                            <td>{{$wawancara->relasi_daftar['nama']}}</td>
+                                            <td>{{dd($wawancara->pendaftaran_id)}}</td>
                                             <td>{{$wawancara->hafalan}}</td>
                                             <td>{{$wawancara->surat_dihafal}}</td>
                                             <td>{{$wawancara->tartil}}</td>
                                             <td>{{$wawancara->jilid}}</td>
+                                            <td>{{$wawancara->catatan_quran}}</td>
                                         </tr>
                                         @endforeach
                                         </tbody>

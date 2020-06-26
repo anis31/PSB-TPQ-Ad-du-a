@@ -1,12 +1,21 @@
 @extends('layouts.master')
 
 @section('content')
+
     <div class="main">
         <div class="main-content">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
                     <div class="panel">
+                    <!-- Alert -->
+                    @if(Session::has('sukses'))
+                        <div class="alert alert-success alert-dismissible" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                            <i class="fa fa-check-circle"></i> {{ Session::get('sukses') }}
+                        </div>
+                    @endif
+                    <!-- End Of Alert -->
 								<div class="panel-heading">
                                     <h3 class="panel-title">Data Santri</h3>
                                     <div class="right">

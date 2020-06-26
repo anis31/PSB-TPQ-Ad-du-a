@@ -11,6 +11,6 @@ class Wawancara extends Model
 
     public function relasi_daftar()
     {
-        return $this->belongTo('App\Daftar');
+        return $this->belongsTo('App\Daftar', 'foreign_key');
     }
 }
