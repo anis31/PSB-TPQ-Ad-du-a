@@ -8,16 +8,20 @@
                     <!-- TABLE HOVER -->
                     <div class="panel">
                         <div class="panel-heading">
-                            <h3 class="panel-title">Kelompok 1A</h3>
+                            <h3 class="heading">Kelompok 1A</span></h3>
+                            <ul class="list-unstyled list-justify">
+                                <li>Pengajar <span>Ustadz Fulan</span></li>
+                                <li>Nomor HP <span>121212</span></li>
+                            </ul>
                         </div>
                         <div class="panel-body">
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>First Name</th>
-                                        <th>Last Name</th>
-                                        <th>Username</th>
+                                        <th>Nama Santri</th>
+                                        <th>Jenis Kelamin</th>
+                                        <th>Umur</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -49,16 +53,20 @@
                     <!-- TABLE HOVER -->
                     <div class="panel">
                         <div class="panel-heading">
-                            <h3 class="panel-title">Kelompok 2B</h3>
+                            <h3 class="heading">Kelompok 2A</span></h3>
+                            <ul class="list-unstyled list-justify">
+                                <li>Pengajar <span>Ustadzah Fulan</span></li>
+                                <li>Nomor HP <span>331133</span></li>
+                            </ul>
                         </div>
                         <div class="panel-body">
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>First Name</th>
-                                        <th>Last Name</th>
-                                        <th>Username</th>
+                                        <th>Nama Santri</th>
+                                        <th>Jenis Kelamin</th>
+                                        <th>Umur</th>
                                     </tr>
                                 </thead>
                                 <tbody>

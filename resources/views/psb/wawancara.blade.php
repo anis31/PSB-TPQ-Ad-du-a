@@ -127,9 +127,9 @@
             <br>
             <!-- Akhir Panel Quran -->
             <!-- Panel Kuisioner -->
-                <h3 class="btn-primary btn-block text-center">Form Kuisioner</h3>
-                <p class="text-info">Form kuisioner mengenai kedediaan dan komitmen serta peraturan di TPQ Ad-Du'a</p>
-                <form>
+                    <h3 class="btn-primary btn-block text-center">Form Kuisioner</h3>
+                    <p class="text-info">Form kuisioner mengenai kesediaan dan komitmen serta peraturan di TPQ Ad-Du'a</p>
+                <form action="/psb/tambah" method="POST">
                         <div class="form-group row">
                             <label class="col-sm-9">Apakah orang tua bersedia mengikuti peraturan di TPQ Ad-Du'a ?</label>
                             <div class="col-sm-3">
