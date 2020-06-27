@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Santri;
 use App\Daftar;
+Use App\Guru;
 use App\Wawancara;
 
 class DashboardController extends Controller
