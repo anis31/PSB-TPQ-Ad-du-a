@@ -75,8 +75,8 @@
 												<div class="col-sm-3">
 												<select class="form-control">
 													<option datd-display="">pilih...</option>
-													<option value="Sudah">Sudah</option>
-													<option value="Belum">Belum</option>
+													<option value="Sudah" >Sudah</option>
+													<option value="Belum" >Belum</option>
 												</select>
 												</div>
 											</div>
