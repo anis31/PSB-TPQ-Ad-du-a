@@ -29,40 +29,40 @@
 						<div class="col-lg-4">
 							<div class="single-feature">
 								<div class="title">
-									<h4>Learn Online Courses</h4>
+									<h4>Struktur Pengurus</h4>
 								</div>
 								<div class="desc-wrap">
 									<p>
 										Usage of the Internet is becoming more common due to rapid advancement
 										of technology.
 									</p>
-									<a href="#">Join Now</a>									
+									<a href="#">selengkapnya</a>									
 								</div>
 							</div>
 						</div>
 						<div class="col-lg-4">
 							<div class="single-feature">
 								<div class="title">
-									<h4>No.1 of universities</h4>
+									<h4>Asatidz</h4>
 								</div>
 								<div class="desc-wrap">
 									<p>
 										For many of us, our very first experience of learning about the celestial bodies begins when we saw our first.
 									</p>
-									<a href="#">Join Now</a>									
+									<a href="#">selengkapnya</a>									
 								</div>
 							</div>
 						</div>
 						<div class="col-lg-4">
 							<div class="single-feature">
 								<div class="title">
-									<h4>Huge Library</h4>
+									<h4>Pendaftaran</h4>
 								</div>
 								<div class="desc-wrap">
 									<p>
 										If you are a serious astronomy fanatic like a lot of us are, you can probably remember that one event.
 									</p>
-									<a href="#">Join Now</a>									
+									<a href="#">selengkapnya</a>									
 								</div>
 							</div>
 						</div>												
@@ -94,12 +94,12 @@
 						<div class="active-upcoming-event-carusel">
 							<div class="single-carusel row align-items-center">
 								<div class="col-12 col-md-6 thumb">
-									<img class="img-fluid" src="{{asset('frontend')}}/img/e1.jpg" alt="">
+									<img class="img-fluid" src="{{asset('frontend')}}/img/kajian_UAH1.jpg" alt="">
 								</div>
 								<div class="detials col-12 col-md-6">
 									<p>25th February, 2018</p>
-									<a href="#"><h4>The Universe Through
-									A Child S Eyes</h4></a>
+									<a href="#"><h4>Tabligh Akbar
+									Ustadz Adi Hidayat, Lc. M.A.</h4></a>
 									<p>
 										For most of us, the idea of astronomy is something we directly connect to “stargazing”, telescopes and seeing magnificent displays in the heavens.
 									</p>
@@ -107,12 +107,12 @@
 							</div>
 							<div class="single-carusel row align-items-center">
 								<div class="col-12 col-md-6 thumb">
-									<img class="img-fluid" src="{{asset('frontend')}}/img/e2.jpg" alt="">
+									<img class="img-fluid" src="{{asset('frontend')}}/img/kajian_UAH2.jpg" alt="">
 								</div>
 								<div class="detials col-12 col-md-6">
 									<p>25th February, 2018</p>
-									<a href="#"><h4>The Universe Through
-									A Child S Eyes</h4></a>
+									<a href="#"><h4>Tabligh Akbar
+									Ustadz Adi Hidayat, Lc. M.A.</h4></a>
 									<p>
 										For most of us, the idea of astronomy is something we directly connect to “stargazing”, telescopes and seeing magnificent displays in the heavens.
 									</p>
@@ -120,12 +120,12 @@
 							</div>	
 							<div class="single-carusel row align-items-center">
 								<div class="col-12 col-md-6 thumb">
-									<img class="img-fluid" src="{{asset('frontend')}}/img/e1.jpg" alt="">
+									<img class="img-fluid" src="{{asset('frontend')}}/img/kajian_UAH1.jpg" alt="">
 								</div>
 								<div class="detials col-12 col-md-6">
 									<p>25th February, 2018</p>
-									<a href="#"><h4>The Universe Through
-									A Child S Eyes</h4></a>
+									<a href="#"><h4>Tabligh Akbar
+									Ustadz Adi Hidayat, Lc. M.A.</h4></a>
 									<p>
 										For most of us, the idea of astronomy is something we directly connect to “stargazing”, telescopes and seeing magnificent displays in the heavens.
 									</p>
@@ -133,12 +133,12 @@
 							</div>	
 							<div class="single-carusel row align-items-center">
 								<div class="col-12 col-md-6 thumb">
-									<img class="img-fluid" src="{{asset('frontend')}}/img/e1.jpg" alt="">
+									<img class="img-fluid" src="{{asset('frontend')}}/img/kajian_UAH1.jpg" alt="">
 								</div>
 								<div class="detials col-12 col-md-6">
 									<p>25th February, 2018</p>
-									<a href="#"><h4>The Universe Through
-									A Child S Eyes</h4></a>
+									<a href="#"><h4>Tabligh Akbar
+									Ustadz Adi Hidayat, Lc. M.A.</h4></a>
 									<p>
 										For most of us, the idea of astronomy is something we directly connect to “stargazing”, telescopes and seeing magnificent displays in the heavens.
 									</p>
@@ -146,12 +146,12 @@
 							</div>
 							<div class="single-carusel row align-items-center">
 								<div class="col-12 col-md-6 thumb">
-									<img class="img-fluid" src="{{asset('frontend')}}/img/e2.jpg" alt="">
+									<img class="img-fluid" src="{{asset('frontend')}}/img/kajian_UAH2.jpg" alt="">
 								</div>
 								<div class="detials col-12 col-md-6">
 									<p>25th February, 2018</p>
-									<a href="#"><h4>The Universe Through
-									A Child S Eyes</h4></a>
+									<a href="#"><h4>Tabligh Akbar
+									Ustadz Adi Hidayat, Lc. M.A.</h4></a>
 									<p>
 										For most of us, the idea of astronomy is something we directly connect to “stargazing”, telescopes and seeing magnificent displays in the heavens.
 									</p>
@@ -159,12 +159,12 @@
 							</div>	
 							<div class="single-carusel row align-items-center">
 								<div class="col-12 col-md-6 thumb">
-									<img class="img-fluid" src="{{asset('frontend')}}/img/e1.jpg" alt="">
+									<img class="img-fluid" src="{{asset('frontend')}}/img/kajian_UAH2.jpg" alt="">
 								</div>
 								<div class="detials col-12 col-md-6">
 									<p>25th February, 2018</p>
-									<a href="#"><h4>The Universe Through
-									A Child S Eyes</h4></a>
+									<a href="#"><h4>Tabligh Akbar
+									Ustadz Adi Hidayat, Lc. M.A.</h4></a>
 									<p>
 										For most of us, the idea of astronomy is something we directly connect to “stargazing”, telescopes and seeing magnificent displays in the heavens.
 									</p>
@@ -315,7 +315,7 @@
 					<div class="overlay overlay-bg"></div>
 					<div class="row justify-content-center">
 						<div class="wrap">
-							<h1 class="text-white">Become an instructor</h1>
+							<h1 class="text-white">Wisuda Tahfidz Jilid 1</h1>
 							<p>
 								There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station whether that is on the deck.
 							</p>
@@ -340,11 +340,11 @@
 					<div class="row">
 						<div class="col-lg-3 col-md-6 single-blog">
 							<div class="thumb">
-								<img class="img-fluid" src="{{asset('frontend')}}/img/b1.jpg" alt="">								
+								<img class="img-fluid" src="{{asset('frontend')}}/img/chessa.jpg" alt="">								
 							</div>
 							<p class="meta">25 April, 2018  |  By <a href="#">Mark Wiens</a></p>
 							<a href="blog-single.html">
-								<h5>Addiction When Gambling Becomes A Problem</h5>
+								<h5>Kung Fu Kid, Olahraga Disela Menghafal </h5>
 							</a>
 							<p>
 								Computers have become ubiquitous in almost every facet of our lives. At work, desk jockeys spend hours in front of their.
@@ -353,7 +353,7 @@
 						</div>
 						<div class="col-lg-3 col-md-6 single-blog">
 							<div class="thumb">
-								<img class="img-fluid" src="{{asset('frontend')}}/img/b2.jpg" alt="">								
+								<img class="img-fluid" src="{{asset('frontend')}}/img/waldan.jpg" alt="">								
 							</div>
 							<p class="meta">25 April, 2018  |  By <a href="#">Mark Wiens</a></p>
 							<a href="blog-single.html">
@@ -366,7 +366,7 @@
 						</div>
 						<div class="col-lg-3 col-md-6 single-blog">
 							<div class="thumb">
-								<img class="img-fluid" src="{{asset('frontend')}}/img/b3.jpg" alt="">								
+								<img class="img-fluid" src="{{asset('frontend')}}/img/ozi.jpg" alt="">								
 							</div>
 							<p class="meta">25 April, 2018  |  By <a href="#">Mark Wiens</a></p>
 							<a href="blog-single.html">
@@ -379,11 +379,11 @@
 						</div>
 						<div class="col-lg-3 col-md-6 single-blog">
 							<div class="thumb">
-								<img class="img-fluid" src="{{asset('frontend')}}/img/b4.jpg" alt="">								
+								<img class="img-fluid" src="{{asset('frontend')}}/img/ust-hariri.jpg" alt="">								
 							</div>
 							<p class="meta">25 April, 2018  |  By <a href="#">Mark Wiens</a></p>
 							<a href="blog-single.html">
-								<h5>Video Games Playing With Imagination</h5>
+								<h5>Ustadz yang ramah dan baik hati</h5>
 							</a>
 							<p>
 								About 64% of all on-line teens say that do things online that they wouldn’t want their parents to know about.   11% of all adult internet 
@@ -401,10 +401,10 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-8 cta-left">
-							<h1>Not Yet Satisfied with our Trend?</h1>
+							<h1>Mau tahu kegiatan di TPQ Ad-Du'a?</h1>
 						</div>
 						<div class="col-lg-4 cta-right">
-							<a class="primary-btn wh" href="#">view our blog</a>
+							<a class="primary-btn wh" href="#">lihat di blog kami</a>
 						</div>
 					</div>
 				</div>	
