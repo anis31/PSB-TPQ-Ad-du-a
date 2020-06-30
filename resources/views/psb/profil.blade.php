@@ -73,17 +73,13 @@
 											<div class="form-group row">
 												<label class="col-sm-9">Apakah ananda sudah mempunyai hafalan ?</label>
 												<div class="col-sm-3">
-												<select class="form-control">
-													<option datd-display="">pilih...</option>
-													<option value="Sudah" >Sudah</option>
-													<option value="Belum" >Belum</option>
-												</select>
+													<input name="hafalan" type="text" class="form-control col-sm-3 " id="hafalan" value="Sudah" disabled>
 												</div>
 											</div>
 											<div class="form-group row">
 												<p class="col-sm-6 text-warning">*Jika sudah, maka isilah jumlah yang dihafal</p>
 												<div class="col-sm-6">
-												<input name="jumlah_hafalan" type="text" class="form-control col-sm-6 " id="jumlah_hafalan" placeholder="misal: An Nas-Ad Dhuha" onfocus="this.placeholder = ''" onblur="this.placeholder = 'misal: An Nas-Ad Dhuha'" required="">
+												<input name="surat_dihafal" type="text" class="form-control col-sm-6 " id="jumlah_hafalan" placeholder="misal: An Nas-Ad Dhuha" onfocus="this.placeholder = ''" onblur="this.placeholder = 'misal: An Nas-Ad Dhuha'">
 												</div>
 												<p class="col-sm-6 text-warning">*Jika belum, maka lewati</p>
 											</div>
@@ -181,7 +177,6 @@
 												<textarea class="form-control mb-20"
 													placeholder="misal: Orang tua/wali belum siap berpartisapasi dalam mendukung proses belajar dan hadir dalam kegiatan karena sibuk bekerja" onfocus="this.placeholder = ''" onblur="this.placeholder = 'misal: Orang tua/wali belum siap berpartisapasi dalam mendukung proses belajar dan hadir dalam kegiatan karena sibuk bekerja'" required="" rows="5"></textarea>
 												<br>
-												<div class="text-right"><a href="#" class="btn btn-success">Simpan</a></div>
 											</form>
 									</div>
 									<!-- End of Panel 2 -->

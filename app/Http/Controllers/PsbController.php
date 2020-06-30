@@ -8,10 +8,10 @@ Use App\Daftar;
 
 class PsbController extends Controller
 {
-    public function tambah()
+    public function tambah(Request $request)
     {
         Wawancara::create($request->all());
-       return redirect('psb.wawancara')->with('sukses','Data berhasil disimpan..');
+       return redirect('psb/wawancara')->with('sukses','Data berhasil disimpan..');
     }
 
     public function index()
