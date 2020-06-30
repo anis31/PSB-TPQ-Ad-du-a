@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Wawancara;
 
 class Daftar extends Model
 {
@@ -13,5 +14,10 @@ class Daftar extends Model
     {
         $relasi_wawancara = Daftar::find($id)->wawancara;
         return $this->hasOne('App\Wawancara');
+    }
+
+    public function pendaftar(){
+        $pendaftar = Daftar::all();
+        return $this->hasOne(Wawancara::class, compact('pendaftar'));
     }
 }

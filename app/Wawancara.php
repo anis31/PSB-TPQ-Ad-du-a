@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Daftar;
 
 class Wawancara extends Model
 {
@@ -12,5 +13,9 @@ class Wawancara extends Model
     public function relasi_daftar()
     {
         return $this->belongsTo('App\Daftar','pendaftaran_id');
+    }
+
+    public function wawancara(){
+        return $this->belongsTo(Daftar::class);
     }
 }

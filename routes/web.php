@@ -29,9 +29,9 @@ Route::group(['middleware' => 'auth'],function(){
     Route::get('/daftar','DashboardController@daftar');
     Route::get('/psb/{id}/profil','DashboardController@profil');
     Route::get('/psb/wawancara','DashboardController@wawancara');
-    Route::post('/psb/tambah','DashboardController@tambah');
-
-    Route::post('/psb/insert_wawancara','PsbController@create');
+    
+    Route::get('/psb/insert_wawancara','PsbController@index');
+    Route::post('psb/insert_wawancara','PsbController@tambah');
     
     Route::get('/santri','SantriController@index');
     Route::post('/santri/tambah','SantriController@tambah');

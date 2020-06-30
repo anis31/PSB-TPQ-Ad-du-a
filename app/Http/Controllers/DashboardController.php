@@ -38,9 +38,4 @@ class DashboardController extends Controller
         return view('psb.wawancara',['data_wawancara'=> $data_wawancara]);
     }
 
-    public function tambah(Request $request)
-    {
-        Wawancara::create($request->all());
-        return redirect('/psb/wawancara')->with('sukses','Data wawancara berhasil ditambahkan...');
-    }
 }

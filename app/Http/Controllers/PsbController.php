@@ -8,8 +8,16 @@ Use App\Daftar;
 
 class PsbController extends Controller
 {
-    public function create()
+    public function tambah()
     {
-        return redirect('/psb/wawancara')->with('sukses','Data wawancara berhasil ditambahkan...');
+        Wawancara::create($request->all());
+       return redirect('psb.wawancara')->with('sukses','Data berhasil disimpan..');
+    }
+
+    public function index()
+    {
+        $list_pendaftar = Daftar::select('id', 'nama')->get();
+        //return $list_pendaftar;
+        return view('psb.insert_wawancara', compact('list_pendaftar'));
     }
 }
