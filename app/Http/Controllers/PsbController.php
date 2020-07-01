@@ -17,7 +17,6 @@ class PsbController extends Controller
     public function index()
     {
         $list_pendaftar = Daftar::select('id', 'nama')->get();
-        //return $list_pendaftar;
         return view('psb.insert_wawancara', compact('list_pendaftar'));
     }
 }

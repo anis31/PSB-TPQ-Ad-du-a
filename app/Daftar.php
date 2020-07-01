@@ -10,10 +10,9 @@ class Daftar extends Model
     protected $table = 'pendaftaran';
     protected $fillable = ['nama','nama_panggilan','tempat_lahir','tgl_lahir','umur','sekolah_asal','kelas','jenis_kelamin','alamat','nama_ortu','nomor_hp'];
 
-    public function relasi_wawancara($id)
+    public function relasi_wawancara()
     {
-        $relasi_wawancara = Daftar::find($id)->wawancara;
-        return $this->hasOne('App\Wawancara');
+        return $this->hasOne('App\Wawancara', 'id');
     }
 
     public function pendaftar(){

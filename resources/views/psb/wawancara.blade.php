@@ -36,7 +36,7 @@
                                             <tbody>
                                             @foreach ($data_wawancara as $wawancara)
                                             <tr>
-                                                <td>{{$wawancara->relasi_daftar['nama']}}</td>
+                                                <td><a href="/psb/{{$wawancara->pendaftaran_id}}/profil">{{$wawancara->relasi_daftar['nama']}}</a></td>
                                                 <td>{{$wawancara->relasi_daftar['jenis_kelamin']}}</td>
                                                 <td>{{$wawancara->hafalan}}</td>
                                                 <td>{{$wawancara->surat_dihafal}}</td>
