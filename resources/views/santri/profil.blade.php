@@ -45,10 +45,6 @@
 											<li>Alamat <span>{{$santri->alamat}}</span></li>
 										</ul>
 									</div>
-									<div class="profile-info">
-										<h4 class="heading">About</h4>
-										<p>Interactively fashion excellent information after distinctive outsourcing.</p>
-									</div>
 									<div class="text-center"><a href="#" class="btn btn-primary">Edit Profile</a></div>
 								</div>
 								<!-- END PROFILE DETAIL -->

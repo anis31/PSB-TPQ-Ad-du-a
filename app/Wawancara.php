@@ -18,4 +18,5 @@ class Wawancara extends Model
     public function wawancara(){
         return $this->belongsTo(Daftar::class);
     }
+
 }
