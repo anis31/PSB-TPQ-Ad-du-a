@@ -13,7 +13,7 @@ class SantriController extends Controller
         if($request->has('cari')){
             $data_santri = Santri::where('nama','LIKE','%'.$request->cari.'%')->get();
         }else{
-            $data_santri = Santri::all();
+            $data_santri = Santri::paginate(10);
         }
         return view('santri.index', ['data_santri' => $data_santri]);
     }

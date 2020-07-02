@@ -19,7 +19,7 @@
 								<div class="panel-heading">
                                     <h3 class="panel-title">Data Santri</h3>
                                     <div class="right">
-                                        <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal"><i class="lnr lnr-plus-circle"></i></button>
+                                        <button type="button" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-plus-square btn-primary btn-xs"></i></button>
                                     </div>
                                     
 								</div>
@@ -27,6 +27,7 @@
 									<table class="table table-hover">
 										<thead>
 											<tr>
+                                                <th>No</th>
                                                 <th>Nama Lengkap</th>
                                                 <th>Nama Panggilan</th>
                                                 <th>Umur</th>
@@ -38,23 +39,25 @@
 											</tr>
 										</thead>
 										<tbody>
-                                        @foreach ($data_santri as $santri)
+                                        @foreach ($data_santri as $santri => $hasil)
                                         <tr>
-                                            <td><a href="/santri/{{$santri->id}}/profil">{{$santri->nama}}</a></td>
-                                            <td><a href="/santri/{{$santri->id}}/profil">{{$santri->nama_panggilan}}</a></td>
-                                            <td>{{$santri->umur}}</td>
-                                            <td>{{$santri->sekolah_asal}}</td>
-                                            <td>{{$santri->kelas}}</td>
-                                            <td>{{$santri->jenis_kelamin}}</td>
-                                            <td>{{$santri->nama_ortu}}</td>
+                                            <td>{{ $santri + $data_santri ->firstitem() }}</td>
+                                            <td><a href="/santri/{{$hasil->id}}/profil">{{$hasil->nama}}</a></td>
+                                            <td><a href="/santri/{{$hasil->id}}/profil">{{$hasil->nama_panggilan}}</a></td>
+                                            <td>{{$hasil->umur}}</td>
+                                            <td>{{$hasil->sekolah_asal}}</td>
+                                            <td>{{$hasil->kelas}}</td>
+                                            <td>{{$hasil->jenis_kelamin}}</td>
+                                            <td>{{$hasil->nama_ortu}}</td>
                                             <td>
-                                                <a href="/santri/{{$santri->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
-                                                <a href="/santri/{{$santri->id}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')">Hapus</a>
+                                                <a href="/santri/{{$hasil->id}}/edit" class="btn btn-warning btn-xs"><i class="lnr lnr-pencil"></i></a>
+                                                <a href="/santri/{{$hasil->id}}/delete" class="btn btn-danger btn-xs" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')"><i class="lnr lnr-trash"></i></a>
                                             </td>
                                         </tr>
                                         @endforeach
 										</tbody>
 									</table>
+                                    {{ $data_santri->links() }}
 								</div>
 							</div>
                     </div>
