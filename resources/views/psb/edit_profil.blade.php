@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
+
 <div class="main">
     <div class="main-content">
         <div class="container-fluid">
@@ -11,7 +12,7 @@
                             <h3 class="panel-title">Edit Biodata Calon Santri Baru</h3>
                         </div>
                         <div class="panel-body">
-                            <form action="/psb/{{$profil_pendaftar->id}}/update" method="POST">
+                            <form action="/psb/{{$profil_pendaftar->id}}/update" method="POST" enctype="multipart/form-data">
                                 {{csrf_field()}}
 
                                 <div class="form-row">
@@ -84,7 +85,10 @@
                                     <input name="nomor_hp" type="text" class="form-control" id="nomor_hp" value="{{$profil_pendaftar->nomor_hp}}">
                                     </div>
                                 </div>
-
+                                <div class="custom-file form-group col-md-12">
+                                    <label for="photo">Upload Photo</label>
+                                    <input type="file" class="custom-file-input form-control" name="photo" id="photo">
+                                </div>
                                 <button type="submit" class="btn btn-warning">Update</button>
                             </form>
                         </div>

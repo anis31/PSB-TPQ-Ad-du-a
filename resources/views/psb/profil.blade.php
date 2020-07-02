@@ -21,7 +21,7 @@
                         <div class="profile-header">
                             <div class="overlay"></div>
                             <div class="profile-main">
-                                <img src="assets/img/user-medium.png" class="img-circle" alt="Avatar">
+                                <img src="{{asset('/images'.$daftar->photo)}}" class="img-circle" alt="photo">
                                 <h3 class="name">{{$daftar->nama}}</h3>
                                 <span class="online-status status-available">Available</span>
                             </div>
