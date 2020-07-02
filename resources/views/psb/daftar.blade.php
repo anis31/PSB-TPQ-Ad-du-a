@@ -5,6 +5,14 @@
 			<!-- MAIN CONTENT -->
 			<div class="main-content">
 				<div class="container-fluid">
+					<!-- Alert -->
+					@if(Session::has('sukses'))
+						<div class="alert alert-success alert-dismissible" role="alert">
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+							<i class="fa fa-check-circle"></i> {{ Session::get('sukses') }}
+						</div>
+					@endif
+					<!-- End Of Alert -->
 					<h3 class="page-title">Kelola Pendaftaran</h3>
 					<div class="row">
 						<div class="col-lg-12">

@@ -25,4 +25,17 @@ class PsbController extends Controller
         $data_wawancara = Wawancara::find($id);
         return view('psb.detail_wawancara', ['data_wawancara'=> $data_wawancara]);
     }
+
+    public function edit($id)
+    {
+        $profil_pendaftar = Daftar::find($id);
+        return view('psb.edit_profil', ['profil_pendaftar' => $profil_pendaftar]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $profil_pendaftar = Daftar::find($id);
+        $profil_pendaftar->update($request->all());
+        return redirect('/daftar')->with('sukses','Data berhasil diperbarui');
+    }
 }
