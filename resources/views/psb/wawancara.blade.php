@@ -21,27 +21,27 @@
                                     <div class="panel-body">
                                     <a href="/psb/insert_wawancara" class="btn btn-success btn-xs"><i class="fa fa-plus-square"></i> Tambah </a>
                                     <div class="table-responsive">
-                                        <table class="table project-table table-responsive table-hover">
+                                        <table class="table project-table table-responsive table-hover table-striped">
                                             <thead>
                                                 <tr>
-                                                    <th>Nama Lengkap</th>
-                                                    <th>Jenis Kelamin</th>
+                                                    <th class="text-nowrap">Nama Lengkap</th>
+                                                    <th>L/P</th>
                                                     <th>Hafalan</th>
-                                                    <th>Surah Yg Dihafal</th>
+                                                    <th class="text-nowrap">Surah Yg Dihafal</th>
                                                     <th>Tartil</th>
                                                     <th>Jilid</th>
-                                                    <th>Catatan Quran</th>
+                                                    <th class="text-center">Catatan Quran</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                             @foreach ($data_wawancara as $wawancara)
                                             <tr>
-                                                <td><a href="/psb/{{$wawancara->id}}/detail_wawancara">{{$wawancara->relasi_daftar['nama']}}</a></td>
+                                                <td class="text-nowrap"><a href="/psb/{{$wawancara->id}}/detail_wawancara">{{$wawancara->relasi_daftar['nama']}}</a></td>
                                                 <td>{{$wawancara->relasi_daftar['jenis_kelamin']}}</td>
                                                 <td>{{$wawancara->hafalan}}</td>
-                                                <td>{{$wawancara->surat_dihafal}}</td>
+                                                <td class="text-nowrap">{{$wawancara->surat_dihafal}}</td>
                                                 <td>{{$wawancara->tartil}}</td>
-                                                <td>{{$wawancara->jilid}}</td>
+                                                <td class="text-nowrap">{{$wawancara->jilid}}</td>
                                                 <td>{{$wawancara->catatan_quran}}</td>
                                             </tr>
                                             @endforeach
