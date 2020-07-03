@@ -22,7 +22,7 @@ class DashboardController extends Controller
 
     public function daftar()
     {
-        $data_pendaftaran = Daftar::all();  
+        $data_pendaftaran = Daftar::paginate(10);  
         return view('psb.daftar',['data_pendaftaran' => $data_pendaftaran]);
     }
 

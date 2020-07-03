@@ -9,7 +9,7 @@ class GuruController extends Controller
 {
     public function index()
     {
-        $data_guru = Guru::all();
+        $data_guru = Guru::paginate(10);
         return view('guru.index', ['data_guru' => $data_guru]);
     }
 

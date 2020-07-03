@@ -18,7 +18,7 @@
 								<div class="panel-heading">
                                     <h3 class="panel-title">Data Guru</h3>
                                     <div class="right">
-                                        <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal"><i class="lnr lnr-plus-circle"></i></button>
+                                        <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-plus-square btn-primary btn-xs"></i></button>
                                     </div>
                                     
 								</div>
@@ -26,6 +26,7 @@
 									<table class="table table-hover">
 										<thead>
 											<tr>
+                                                <th>No</th>
                                                 <th>Nama Lengkap</th>
                                                 <th>Umur</th>
                                                 <th>L/P</th>
@@ -35,21 +36,23 @@
 											</tr>
 										</thead>
 										<tbody>
-                                        @foreach ($data_guru as $guru)
+                                        @foreach ($data_guru as $guru => $hasil)
                                         <tr>
-                                            <td>{{$guru->nama}}</td>
-                                            <td>{{$guru->umur}}</td>
-                                            <td>{{$guru->jenis_kelamin}}</td>
-                                            <td>{{$guru->tahfidz}}</td>
-                                            <td>{{$guru->tartil}}</td>
+                                            <td>{{ $guru + $data_guru ->firstitem() }}</td>
+                                            <td>{{$hasil->nama}}</td>
+                                            <td>{{$hasil->umur}}</td>
+                                            <td>{{$hasil->jenis_kelamin}}</td>
+                                            <td>{{$hasil->tahfidz}}</td>
+                                            <td>{{$hasil->tartil}}</td>
                                             <td>
-                                                <a href="#" class="btn btn-warning btn-sm">Edit</a>
-                                                <a href="#" class="btn btn-danger btn-sm" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')">Hapus</a>
+                                                <a href="#" class="btn btn-warning btn-xs"><i class="lnr lnr-pencil"></i></a>
+                                                <a href="#" class="btn btn-danger btn-xs" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')"><i class="lnr lnr-trash"></i></a>
                                             </td>
                                         </tr>
                                         @endforeach
 										</tbody>
 									</table>
+                                    {{ $data_guru->links() }}
 								</div>
 							</div>
                     </div>

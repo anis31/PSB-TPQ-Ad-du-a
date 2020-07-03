@@ -40,6 +40,7 @@
 								<table class="table table-hover">
 									<thead>
 										<tr>
+											<th>No</th>
 											<th>Nama Lengkap</th>
 											<th>Nama Panggilan</th>
 											<th>Umur</th>
@@ -50,19 +51,21 @@
 										</tr>
 									</thead>
 									<tbody>
-									@foreach ($data_pendaftaran as $daftar)
+									@foreach ($data_pendaftaran as $daftar => $hasil)
 									<tr>
-										<td><a href="/psb/{{$daftar->id}}/profil">{{$daftar->nama}}</a></td>
-										<td><a href="/psb/{{$daftar->id}}/profil">{{$daftar->nama_panggilan}}</a></td>
-										<td>{{$daftar->umur}}</td>
-										<td>{{$daftar->sekolah_asal}}</td>
-										<td>{{$daftar->kelas}}</td>
-										<td>{{$daftar->jenis_kelamin}}</td>
-										<td>{{$daftar->nama_ortu}}</td>
+										<td>{{ $daftar + $data_pendaftaran->firstitem() }}</td>
+										<td><a href="/psb/{{$hasil->id}}/profil">{{$hasil->nama}}</a></td>
+										<td><a href="/psb/{{$hasil->id}}/profil">{{$hasil->nama_panggilan}}</a></td>
+										<td>{{$hasil->umur}}</td>
+										<td>{{$hasil->sekolah_asal}}</td>
+										<td>{{$hasil->kelas}}</td>
+										<td>{{$hasil->jenis_kelamin}}</td>
+										<td>{{$hasil->nama_ortu}}</td>
 									</tr>
 									@endforeach
 									</tbody>
 								</table>
+								{{ $data_pendaftaran->links() }}
 							</div>
 						</div>
 						<!-- END TABLE NO PADDING -->
