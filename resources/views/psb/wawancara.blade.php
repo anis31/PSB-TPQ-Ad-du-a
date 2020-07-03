@@ -21,9 +21,10 @@
                                     <div class="panel-body">
                                     <a href="/psb/insert_wawancara" class="btn btn-success btn-xs"><i class="fa fa-plus-square"></i> Tambah </a>
                                     <div class="table-responsive">
-                                        <table class="table project-table table-responsive table-hover table-striped">
+                                        <table class="table project-table table-responsive table-hover">
                                             <thead>
                                                 <tr>
+                                                    <th>No</th>
                                                     <th class="text-nowrap">Nama Lengkap</th>
                                                     <th>L/P</th>
                                                     <th>Hafalan</th>
@@ -34,19 +35,21 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach ($data_wawancara as $wawancara)
+                                            @foreach ($data_wawancara as $wawancara => $hasil)
                                             <tr>
-                                                <td class="text-nowrap"><a href="/psb/{{$wawancara->id}}/detail_wawancara">{{$wawancara->relasi_daftar['nama']}}</a></td>
-                                                <td>{{$wawancara->relasi_daftar['jenis_kelamin']}}</td>
-                                                <td>{{$wawancara->hafalan}}</td>
-                                                <td class="text-nowrap">{{$wawancara->surat_dihafal}}</td>
-                                                <td>{{$wawancara->tartil}}</td>
-                                                <td class="text-nowrap">{{$wawancara->jilid}}</td>
-                                                <td>{{$wawancara->catatan_quran}}</td>
+                                                <td>{{ $wawancara + $data_wawancara->firstitem() }}</td>
+                                                <td class="text-nowrap"><a href="/psb/{{$hasil->id}}/detail_wawancara">{{$hasil->relasi_daftar['nama']}}</a></td>
+                                                <td>{{$hasil->relasi_daftar['jenis_kelamin']}}</td>
+                                                <td>{{$hasil->hafalan}}</td>
+                                                <td class="text-nowrap">{{$hasil->surat_dihafal}}</td>
+                                                <td>{{$hasil->tartil}}</td>
+                                                <td class="text-nowrap">{{$hasil->jilid}}</td>
+                                                <td>{{$hasil->catatan_quran}}</td>
                                             </tr>
                                             @endforeach
                                             </tbody>
                                         </table>
+                                        {{$data_wawancara->links()}}
                                     </div>
                                     </div>
                         </div>

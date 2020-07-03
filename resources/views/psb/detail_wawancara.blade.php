@@ -100,6 +100,11 @@
 											<textarea class="form-control mb-20" name="catatan_quran" id="catatan_quran"
 												placeholder="{{$data_wawancara->catatan_quran}}" rows="5" disabled></textarea>
 											<br>
+											<div class="text-right">
+												<button class="btn btn-warning btn-sm">Edit</button>
+												<button class="btn btn-primary btn-sm">Terima</button>
+												<button class="btn btn-danger btn-sm" onclick="return confirm('Data santri yang ditolak akan dihapus. Apakah anda yakin?')">Tolak</button>
+											</div>
 										</form>
                                     </div>
 									<!-- End of Panel 1 -->

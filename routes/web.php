@@ -34,7 +34,7 @@ Route::group(['middleware' => 'auth'],function(){
     Route::post('/psb/insert_wawancara','PsbController@tambah');
     Route::get('/psb/{id}/detail_wawancara','PsbController@detail');
     Route::get('/psb/{id}/edit','PsbController@edit');
-    Route::post('/psb/{id}/update','PsbController@update');
+    Route::post('/psb/{id}/update','PsbController@update')->name('/psb/{id}/update');
     
     Route::get('/santri','SantriController@index');
     Route::post('/santri/tambah','SantriController@tambah');

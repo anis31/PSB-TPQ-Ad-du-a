@@ -22,7 +22,7 @@ class DashboardController extends Controller
 
     public function daftar()
     {
-        $data_pendaftaran = Daftar::paginate(10);  
+        $data_pendaftaran = Daftar::paginate(8);  
         return view('psb.daftar',['data_pendaftaran' => $data_pendaftaran]);
     }
 
@@ -34,7 +34,7 @@ class DashboardController extends Controller
 
     public function wawancara()
     {
-        $data_wawancara = Wawancara::all();
+        $data_wawancara = Wawancara::paginate(6);
         return view('psb.wawancara',['data_wawancara'=> $data_wawancara]);
     }
 

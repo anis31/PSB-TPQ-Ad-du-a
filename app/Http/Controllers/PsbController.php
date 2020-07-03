@@ -14,7 +14,7 @@ class PsbController extends Controller
         return redirect('psb/wawancara')->with('sukses','Data berhasil disimpan..');
     }
 
-    public function index()
+    public function index() //Dropdown function
     {
         $list_pendaftar = Daftar::select('id', 'nama')->get();
         return view('psb.insert_wawancara', compact('list_pendaftar'));
@@ -37,7 +37,7 @@ class PsbController extends Controller
         $profil_pendaftar = Daftar::find($id);
         $profil_pendaftar->update($request->all());
         if ($request->hasFile('photo')){
-            $request->file('photo')->move('/images', $request->file('photo')->getClientOriginalName());
+            $request->file('photo')->move(public_path('images'), $request->file('photo')->getClientOriginalName());
             $profil_pendaftar->photo = $request->file('photo')->getClientOriginalName();
             $profil_pendaftar->save();
         }
