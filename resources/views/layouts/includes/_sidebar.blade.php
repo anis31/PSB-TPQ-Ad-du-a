@@ -11,7 +11,7 @@
 						<ul class="nav">
 							<li><a href="/daftar" class="">Form</a></li>
 							<li><a href="/psb/wawancara" class="">Wawancara</a></li>
-							<li><a href="/dashboard" class="">Pengumuman</a></li>
+							<li><a href="/psb/pengumuman" class="">Pengumuman</a></li>
 						</ul>
 					</div>
 				</li>

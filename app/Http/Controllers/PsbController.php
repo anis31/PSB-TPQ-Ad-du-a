@@ -52,4 +52,9 @@ class PsbController extends Controller
         return redirect('/psb/wawancara')->with('sukses','Data berhasil dihapus..');
     }
 
+    public function terima()
+    {
+        return view('psb/pengumuman');
+    }
+
 }
