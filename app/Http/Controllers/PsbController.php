@@ -43,4 +43,13 @@ class PsbController extends Controller
         }
         return redirect('/daftar')->with('sukses','Data berhasil diperbarui');
     }
+
+    public function delete($id)
+    {
+        $profil_pendaftar = Daftar::find($id);
+        //dd ($id);
+        $profil_pendaftar->delete();
+        return redirect('/psb/wawancara')->with('sukses','Data berhasil dihapus..');
+    }
+
 }
