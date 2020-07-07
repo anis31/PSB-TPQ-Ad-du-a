@@ -31,9 +31,28 @@
                                                 <th>Sekolah Asal</th>
                                                 <th>Kelas</th>
                                                 <th>Nama Orang Tua</th>
+                                                <th>Aksi</th>
 											</tr>
 										</thead>
+                                        <tbody>
+                                        @foreach ($data_santri as $santri => $hasil)
+                                        <tr>
+                                            <td>{{ $santri + $data_santri ->firstitem() }}</td>
+                                            <td><a href="/santri/{{$hasil->id}}/profil">{{$hasil->nama}}</a></td>
+                                            <td><a href="/santri/{{$hasil->id}}/profil">{{$hasil->nama_panggilan}}</a></td>
+                                            <td>{{$hasil->jenis_kelamin}}</td>
+                                            <td>{{$hasil->umur}}</td>
+                                            <td>{{$hasil->sekolah_asal}}</td>
+                                            <td>{{$hasil->kelas}}</td>
+                                            <td>{{$hasil->nama_ortu}}</td>
+                                            <td>
+                                                <a href="/santri/{{$hasil->id}}/edit" class="btn btn-warning btn-xs"><i class="lnr lnr-pencil"></i></a>
+                                            </td>
+                                        </tr>
+                                        @endforeach
+										</tbody>
                                     </table>
+                                    {{ $data_santri->links() }}
                                 </div>
                         </div>
                      <!-- End Panel Heading -->

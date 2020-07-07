@@ -36,7 +36,7 @@
 						
 							<div class="profile-detail">
 								<div class="profile-info">
-									<form action="/psb/pengumuman" method="POST">
+									<form action="/psb/terima" method="POST">
 									{{csrf_field()}}
 										<h4 class="heading">Biodata</h4>
 										<ul class="list-unstyled list-justify">

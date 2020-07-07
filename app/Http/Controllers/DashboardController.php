@@ -34,7 +34,7 @@ class DashboardController extends Controller
 
     public function wawancara()
     {
-        $data_wawancara = Wawancara::paginate(6);
+        $data_wawancara = Wawancara::paginate(10);
         return view('psb.wawancara',['data_wawancara'=> $data_wawancara]);
     }
 
