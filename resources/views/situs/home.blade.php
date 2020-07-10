@@ -56,13 +56,13 @@
 						<div class="col-lg-4">
 							<div class="single-feature">
 								<div class="title">
-									<h4>Pendaftaran</h4>
+									<h4>Pengumuman</h4>
 								</div>
 								<div class="desc-wrap">
 									<p>
-										If you are a serious astronomy fanatic like a lot of us are, you can probably remember that one event.
+										Pengumuman hasil penerimaan santri baru periode 2020-2021
 									</p>
-									<a href="#">selengkapnya</a>									
+									<a href="/pengumuman">selengkapnya</a>									
 								</div>
 							</div>
 						</div>												

@@ -53,6 +53,9 @@
 										</tbody>
                                     </table>
                                     {{ $data_santri->links() }}
+                                    <div class="text-right">
+                                        <a href="/pengumuman" class="btn btn-primary btn-sm">Publish</a>
+                                    </div>
                                 </div>
                         </div>
                      <!-- End Panel Heading -->

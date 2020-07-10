@@ -13,23 +13,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Route SITUS Landing Page
 Route::get('/','SitusController@home');
 Route::get('/tentang','SitusController@tentang');
 Route::get('/pendaftaran','SitusController@pendaftaran');
 Route::post('/daftar','SitusController@daftar');
 Route::get('/pesan_telah_daftar','SitusController@pesan_telah_daftar');
+Route::get('/pengumuman','SitusController@pengumuman');
 
 Route::get('/login','AuthController@login')->name('login');
 Route::post('/postlogin','AuthController@postlogin');
 Route::get('/logout','AuthController@logout');
 
 Route::group(['middleware' => 'auth'],function(){
+    // Route DASHBOARD
     Route::get('/dashboard','DashboardController@index');
     Route::get('/kelompok','DashboardController@kelompok');
     Route::get('/daftar','DashboardController@daftar');
     Route::get('/psb/{id}/profil','DashboardController@profil');
     Route::get('/psb/wawancara','DashboardController@wawancara');
     
+    // Route PSB
     Route::get('/psb/insert_wawancara','PsbController@index');
     Route::post('/psb/insert_wawancara','PsbController@tambah');
     Route::get('/psb/{id}/detail_wawancara','PsbController@detail');
@@ -39,6 +43,7 @@ Route::group(['middleware' => 'auth'],function(){
     Route::post('/psb/terima','PsbController@terima');
     Route::get('/psb/pengumuman','PsbController@pengumuman');
     
+    // Route SANTRI
     Route::get('/santri','SantriController@index');
     Route::post('/santri/tambah','SantriController@tambah');
     Route::get('/santri/{id}/edit', 'SantriController@edit');

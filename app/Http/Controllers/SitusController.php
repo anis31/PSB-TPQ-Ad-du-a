@@ -32,4 +32,9 @@ class SitusController extends Controller
     {
         return view('situs.pesan');
     }
+
+    public function pengumuman()
+    {
+        return view('situs.pengumuman');
+    }
 }
