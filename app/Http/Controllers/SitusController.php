@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Daftar;
+use App\Santri;
 
 class SitusController extends Controller
 {
@@ -35,6 +36,7 @@ class SitusController extends Controller
 
     public function pengumuman()
     {
-        return view('situs.pengumuman');
+        $data_santri = Santri::paginate(10);
+        return view('situs.pengumuman', compact('data_santri'));
     }
 }
