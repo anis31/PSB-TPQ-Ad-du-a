@@ -53,10 +53,10 @@
 										</tbody>
                                     </table>
                                     {{ $data_santri->links() }}
-                                    <div class="text-right">
+                                    <!-- <div class="text-right">
                                         <a href="/pengumuman" class="btn btn-primary btn-sm">Tampilkan</a>
                                         <a href="/psb/pengumuman" class="btn btn-default btn-sm">Sembunyikan</a>
-                                    </div>
+                                    </div> -->
                                 </div>
                         </div>
                      <!-- End Panel Heading -->

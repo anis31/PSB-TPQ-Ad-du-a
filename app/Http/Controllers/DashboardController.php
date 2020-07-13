@@ -10,8 +10,9 @@ use App\Wawancara;
 
 class DashboardController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+        $data_santri = Santri::all();
         return view('dashboards.index');
     }
 
