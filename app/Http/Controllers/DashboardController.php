@@ -10,10 +10,10 @@ use App\Wawancara;
 
 class DashboardController extends Controller
 {
-    public function index(Request $request)
+    public function index()
     {
-        $data_santri = Santri::all();
-        return view('dashboards.index');
+        $data_pendaftaran = Daftar::all();
+        return view('dashboards.index', compact('data_pendaftaran'));
     }
 
     public function kelompok()

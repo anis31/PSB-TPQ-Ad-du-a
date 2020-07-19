@@ -20,7 +20,7 @@
                                     <div class="metric">
                                         <span class="icon"><i class="fa fa-bar-chart"></i></span>
                                         <p>
-                                            <span class="number">{{ $data_santri->jenis_kelamin->count() }}</span>
+                                            <span class="number">30</span>
                                             <span class="title">Laki-Laki</span>
                                         </p>
                                     </div>
@@ -29,7 +29,7 @@
                                     <div class="metric">
                                         <span class="icon"><i class="fa fa-bar-chart"></i></span>
                                         <p>
-                                            <span class="number">35%</span>
+                                            <span class="number">35</span>
                                             <span class="title">Perempuan</span>
                                         </p>
                                     </div>
