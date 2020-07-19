@@ -18,7 +18,7 @@
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="metric">
-                                        <span class="icon"><i class="fa fa-bar-chart"></i></span>
+                                        <span class="icon"><i class="fa fa-male"></i></span>
                                         <p>
                                             <span class="number">30</span>
                                             <span class="title">Laki-Laki</span>
@@ -27,7 +27,7 @@
                                 </div>
                                 <div class="col-md-3">
                                     <div class="metric">
-                                        <span class="icon"><i class="fa fa-bar-chart"></i></span>
+                                        <span class="icon"><i class="fa fa-female"></i></span>
                                         <p>
                                             <span class="number">35</span>
                                             <span class="title">Perempuan</span>

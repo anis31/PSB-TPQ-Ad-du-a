@@ -16,13 +16,9 @@ class CreateHalaqohTable extends Migration
         Schema::create('halaqoh', function (Blueprint $table) {
             $table->id();
             $table->integer('nomor_halaqoh');
-            $table->string('kode_halaqoh', 5);
-            //Relasi ke Table Guru
+            $table->string('kode_halaqoh');
             $table->unsignedBigInteger('guru_id');
             $table->foreign('guru_id')->references('id')->on('guru')->onDelete('cascade');
-            //Relasi Ke Table Santri
-            $table->unsignedBigInteger('santri_id');
-            $table->foreign('santri_id')->references('id')->on('santri')->onDelete('cascade');
             $table->timestamps();
         });
     }

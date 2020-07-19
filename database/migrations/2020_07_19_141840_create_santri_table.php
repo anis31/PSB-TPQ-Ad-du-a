@@ -26,7 +26,10 @@ class CreateSantriTable extends Migration
             $table->text('alamat');
             $table->string('nama_ortu');
             $table->string('nomor_hp');
-            $table->string('avatar');
+            $table->string('avatar')->nullable();
+            //Relasi ke Table Halaqoh
+            $table->unsignedBigInteger('halaqoh_id')->nullable();
+            $table->foreign('halaqoh_id')->references('id')->on('halaqoh')->onDelete('cascade');
             $table->timestamps();
         });
     }
