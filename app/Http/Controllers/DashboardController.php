@@ -7,6 +7,7 @@ use App\Santri;
 use App\Daftar;
 Use App\Guru;
 use App\Wawancara;
+use App\Halaqoh;
 
 class DashboardController extends Controller
 {
@@ -18,7 +19,9 @@ class DashboardController extends Controller
 
     public function kelompok()
     {
-        return view('santri.kelompok');
+        $halaqoh = Halaqoh::all();
+        //dd ($halaqoh);
+        return view('santri.kelompok', compact('halaqoh'));
     }
 
     public function daftar()

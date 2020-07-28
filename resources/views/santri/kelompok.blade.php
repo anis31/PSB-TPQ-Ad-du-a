@@ -17,14 +17,15 @@
         </div>
         <!-- Akhir Panel ATAS -->
         <!-- PANEL TABLE KELOMPOK -->
+        @foreach ($halaqoh as $data => $hasil)
             <div class="col-md-6">
                 <!-- TABLE HOVER -->
                 <div class="panel">
                     <div class="panel-heading">
-                        <h3 class="heading">Kelompok 1A</span></h3>
+                        <h3 class="heading">Kelompok {{ $hasil->nomor_halaqoh }}{{ $hasil->kode_halaqoh }}</span></h3>
                         <ul class="list-unstyled list-justify">
-                            <li>Pengajar <span>Ustadz Fulan</span></li>
-                            <li>Nomor HP <span>121212</span></li>
+                            <li>Pengajar <span>{{ $hasil->relasi_guru['nama'] }}</span></li>
+                            <li>Nomor HP <span>{{ $hasil->relasi_guru['no_hp'] }}</span></li>
                             <li type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modalTambah_data_santri">Tambah</li>
                             <li type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target=".modal_edit">Edit</li>
                         </ul>
@@ -64,52 +65,8 @@
                 </div>
                 <!-- END TABLE HOVER -->
             </div>
+        @endforeach
             <div class="col-md-6">
-                <!-- TABLE HOVER -->
-                <div class="panel">
-                    <div class="panel-heading">
-                        <h3 class="heading">Kelompok 2A</span></h3>
-                        <ul class="list-unstyled list-justify">
-                            <li>Pengajar <span>Ustadzah Aisyah</span></li>
-                            <li>Nomor HP <span>323232</span></li>
-                            <li type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modalTambah_data_santri">Tambah</li>
-                            <li type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target=".modal_edit">Edit</li>
-                        </ul>
-                    </div>
-                    <div class="panel-body">
-                        <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Nama Santri</th>
-                                    <th>Jenis Kelamin</th>
-                                    <th>Umur</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Steve</td>
-                                    <td>Jobs</td>
-                                    <td>@steve</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Simon</td>
-                                    <td>Philips</td>
-                                    <td>@simon</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Jane</td>
-                                    <td>Doe</td>
-                                    <td>@jane</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <!-- END TABLE HOVER -->
             </div>
             <!-- AKHIR PANEL TABLE KELOMPOK -->
 

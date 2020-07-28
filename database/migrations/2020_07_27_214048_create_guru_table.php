@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTableGuru extends Migration
+class CreateGuruTable extends Migration
 {
     /**
      * Run the migrations.
@@ -17,6 +17,7 @@ class CreateTableGuru extends Migration
             $table->id();
             $table->string('nama');
             $table->integer('umur');
+            $table->string('no_hp',20);
             $table->string('jenis_kelamin');
             $table->string('tahfidz');
             $table->string('tartil');

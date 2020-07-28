@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Santri;
 use App\Daftar;
+use App\Halaqoh;
+use App\Guru;
 
 class SantriController extends Controller
 {
