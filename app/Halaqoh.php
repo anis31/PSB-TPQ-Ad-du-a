@@ -14,4 +14,9 @@ class Halaqoh extends Model
     {
         return $this->belongsTo('App\Guru', 'guru_id', 'id');
     }
+
+    public function relasi_santri()
+    {
+        return $this->hasMany('App\Santri', 'halaqoh_id');
+    }
 }
