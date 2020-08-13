@@ -20,6 +20,7 @@ class DashboardController extends Controller
     public function kelompok()
     {
         $halaqoh = Halaqoh::all();
+        $santri_halaqoh = Santri::all();
         return view('santri.kelompok', compact('halaqoh'));
     }
 
