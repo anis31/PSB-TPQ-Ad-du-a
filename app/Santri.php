@@ -13,4 +13,5 @@ class Santri extends Model
     {
         return $this->belongsTo('App\Halaqoh', 'halaqoh_id');
     }
+
 }

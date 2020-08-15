@@ -32,42 +32,17 @@
                     </div>
                     <div class="panel-body">
                         <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Nama Santri</th>
-                                    <th>Jenis Kelamin</th>
-                                    <th>Umur</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Steve</td>
-                                    <td>Jobs</td>
-                                    <td>@steve</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Simon</td>
-                                    <td>Philips</td>
-                                    <td>@simon</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Jane</td>
-                                    <td>Doe</td>
-                                    <td>@jane</td>
-                                </tr>
-                            </tbody>
+                        @foreach ($data->relasi_santri as $santri)
+                        <tr>
+                            <td>{{$santri->nama}}</td>
+                        </tr>
+                        @endforeach
                         </table>
                     </div>
                 </div>
                 <!-- END TABLE HOVER -->
             </div>
         @endforeach
-            <div class="col-md-6">
-            </div>
             <!-- AKHIR PANEL TABLE KELOMPOK -->
 
             <!-- MODAL EDIT data santri-->

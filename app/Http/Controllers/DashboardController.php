@@ -17,11 +17,12 @@ class DashboardController extends Controller
         return view('dashboards.index', compact('data_pendaftaran'));
     }
 
-    public function kelompok()
+public function kelompok()
     {
         $halaqoh = Halaqoh::all();
         $santri_halaqoh = Santri::all();
-        return view('santri.kelompok', compact('halaqoh'));
+        //dd($santri_halaqoh);
+        return view('santri.kelompok', ['halaqoh' => $halaqoh, 'santri_halaqoh'=> $santri_halaqoh]);
     }
 
     public function daftar()
