@@ -22,9 +22,15 @@
 									<h3 class="panel-title">Form Pendaftaran</h3>
 								</div>
 								<div class="panel-body">
+
+									@if($app->value === "1")
+										buka
+									@else
+										tutup
+									@endif
 									<p class="demo-button">
-										<button type="button" class="btn btn-success">Buka</button>
-										<button type="button" class="btn btn-danger">Tutup</button>
+										<button type="button" class="btn btn-success btn-pendaftaran" data-status="1">Buka</button>
+										<button type="button" class="btn btn-danger btn-pendaftaran" data-status="0">Tutup</button>
 									</p>
 								</div>
 							</div>
@@ -48,6 +54,7 @@
 											<th>Kelas</th>
 											<th>L/P</th>
 											<th>Nama Orang Tua</th>
+											<th>Status</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -61,6 +68,7 @@
 										<td>{{$hasil->kelas}}</td>
 										<td>{{$hasil->jenis_kelamin}}</td>
 										<td>{{$hasil->nama_ortu}}</td>
+										<td>{{$hasil->status}}</td>
 									</tr>
 									@endforeach
 									</tbody>
@@ -79,3 +87,47 @@
 			<!-- END MAIN CONTENT -->
 		</div>
 @stop
+
+@push('scripts')
+<script>
+// ACTION SIMPAN DATA HALAQOH
+$('.btn-pendaftaran').click(function(e) {
+        e.preventDefault()
+		var status = $(this).data('status');
+
+        $.ajax({
+            type: 'POST',
+            url: '{{url("/app/edit-pendaftaran")}}',
+            data: {
+                '_token': '{{csrf_token()}}',
+                'status': status
+            },
+            success: function(response){
+                alert(response);
+                location.reload();
+            },
+            error: function (jqXHR, exception) {
+                var msg = '';
+                if (jqXHR.status === 0) {
+                    msg = 'Not connect.\n Verify Network.';
+                } else if (jqXHR.status == 404) {
+                    msg = 'Requested page not found. [404]';
+                } else if (jqXHR.status == 500) {
+                    msg = 'Internal Server Error [500].';
+                } else if (exception === 'parsererror') {
+                    msg = 'Requested JSON parse failed.';
+                } else if (exception === 'timeout') {
+                    msg = 'Time out error.';
+                } else if (exception === 'abort') {
+                    msg = 'Ajax request aborted.';
+                } else {
+                    msg = 'Uncaught Error.\n' + jqXHR.responseText;
+                }
+                alert(msg);
+            }
+
+        })
+    });
+
+</script>
+@endpush

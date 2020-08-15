@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\App;
 use App\Daftar;
 use App\Santri;
 
@@ -20,7 +21,24 @@ class SitusController extends Controller
 
     public function pendaftaran()
     {
-        return view('situs.pendaftaran');
+        $app = App::where('key', 'STATUS_PENDAFTARAN')->firstOrFail();
+
+        if ($app->value == '1'){
+            return view('situs.pendaftaran');
+        }
+
+        return redirect('/pendaftaran-tutup');
+    }
+
+    public function pendaftaranTutup()
+    {
+        $app = App::where('key', 'STATUS_PENDAFTARAN')->firstOrFail();
+
+        if ($app->value == '1'){
+            return redirect('/pendaftaran');
+        }
+
+        return view('situs.pendaftaran_tutup');
     }
 
     public function daftar(Request $request)

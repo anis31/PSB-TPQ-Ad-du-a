@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/','SitusController@home');
 Route::get('/tentang','SitusController@tentang');
 Route::get('/pendaftaran','SitusController@pendaftaran');
+Route::get('/pendaftaran-tutup','SitusController@pendaftaranTutup');
 Route::post('/daftar','SitusController@daftar');
 Route::get('/pesan_telah_daftar','SitusController@pesan_telah_daftar');
 Route::get('/pengumuman','SitusController@pengumuman');
@@ -39,8 +40,8 @@ Route::group(['middleware' => 'auth'],function(){
     Route::get('/psb/{id}/detail_wawancara','PsbController@detail');
     Route::get('/psb/{id}/edit','PsbController@edit');
     Route::post('/psb/{id}/update','PsbController@update');
-    Route::get('/psb/{id}/delete','PsbController@delete');
-    Route::post('/psb/terima','PsbController@terima');
+    Route::get('/psb/{id}/tolak','PsbController@tolak');
+    Route::post('/psb/{id}/terima','PsbController@terima');
     Route::get('/psb/pengumuman','PsbController@pengumuman');
     
     // Route SANTRI
@@ -55,5 +56,13 @@ Route::group(['middleware' => 'auth'],function(){
     // Route GURU
     Route::get('/guru','GuruController@index');
     Route::post('/guru/tambah','GuruController@tambah');
+    
+    // Route Halaqoh
+    Route::post('/halaqoh/simpan-santri','HalaqohController@simpanSantri');
+    Route::post('/halaqoh/simpan','HalaqohController@simpanHalaqoh');
+    
+    // Route Setting Aplikasi
+    Route::post('/app/edit-pendaftaran','AppController@editPendaftaran');
+
 });
     

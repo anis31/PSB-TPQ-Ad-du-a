@@ -45,17 +45,22 @@ class PsbController extends Controller
         return redirect('/daftar')->with('sukses','Data berhasil diperbarui');
     }
 
-    public function delete($id)
+    public function tolak($id)
     {
-        $profil_pendaftar = Daftar::find($id);
-        $profil_pendaftar->delete();
-        return redirect('/psb/wawancara')->with('sukses','Data berhasil dihapus..');
+        $profil_pendaftar = Daftar::findOrFail($id);
+        $profil_pendaftar->status="TOLAK";
+        $profil_pendaftar->save();
+        return redirect('/psb/wawancara')->with('sukses','Data calon santri berhasil ditolak..');
     }
 
-    public function terima(Request $request)
+    public function terima(Request $request, $id)
     {
+        $profil_pendaftar = Daftar::findOrFail($id);
+        $profil_pendaftar->status="TERIMA";
+        $profil_pendaftar->save();
+
         Santri::create($request->all());
-        return redirect('psb/pengumuman')->with('sukses','Data berhasil ditambahkan..');
+        return redirect('psb/pengumuman')->with('sukses','Data calon santri berhasil diterima..');
     }
 
     public function pengumuman(Request $request)

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\App;
 use App\Santri;
 use App\Daftar;
 Use App\Guru;
@@ -17,18 +18,26 @@ class DashboardController extends Controller
         return view('dashboards.index', compact('data_pendaftaran'));
     }
 
-public function kelompok()
+    public function kelompok()
     {
         $halaqoh = Halaqoh::all();
-        $santri_halaqoh = Santri::all();
-        //dd($santri_halaqoh);
-        return view('santri.kelompok', ['halaqoh' => $halaqoh, 'santri_halaqoh'=> $santri_halaqoh]);
+        $guru = Guru::whereDoesntHave('relasi_halaqoh')->get();
+        $santri_unlisted = Santri::whereNull('halaqoh_id')->get();
+        return view('santri.kelompok', [
+            'halaqoh' => $halaqoh, 
+            'guru' => $guru, 
+            'santri_unlisted'=> $santri_unlisted
+        ]);
     }
 
     public function daftar()
     {
         $data_pendaftaran = Daftar::paginate(8);  
-        return view('psb.daftar',['data_pendaftaran' => $data_pendaftaran]);
+        $app = App::where('key', 'STATUS_PENDAFTARAN')->firstOrFail();
+        return view('psb.daftar', [
+            'data_pendaftaran' => $data_pendaftaran,
+            'app' => $app
+        ]);
     }
 
     public function profil($id)
@@ -39,8 +48,12 @@ public function kelompok()
 
     public function wawancara()
     {
-        $data_wawancara = Wawancara::paginate(10);
+        $data_wawancara = Wawancara::whereHas('relasi_daftar', function ($pendaftaran) {
+            $pendaftaran->whereNull('status');
+        })->paginate(10);
         return view('psb.wawancara',['data_wawancara'=> $data_wawancara]);
     }
+
+    
 
 }

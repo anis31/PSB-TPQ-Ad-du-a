@@ -57,7 +57,8 @@
                     <input name="tempat_lahir" type="text" class="form-control  col-lg-12 mb-20" id="tempat_lahir" placeholder="Tempat Lahir" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Tempat Lahir'" required="">
                     <label for="tgl_lahir" class="col-lg-12">Tanggal lahir</label>
                     <input name="tgl_lahir" type="date" class="form-control col-lg-6 mb-20" id="tgl_lahir" required="">
-                    <input name="umur" type="text" class="form-control col-lg-6 mb-20" id="umur" placeholder="Umur" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Umur'" required="">
+                    <input hidden name="umur" type="text" id="umur">
+                    <span class="form-control col-lg-6 mb-20" id="umur_read"></span>
                     <input name="sekolah_asal" type="text" class="form-control mb-20 col-lg-12" id="sekolah_asal" placeholder="Sekolah Asal" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Sekolah Asal'" required="">
                     <select name="kelas" id="inputKelas" class="form-control col-lg-6 mb-20" required="">
                         <option datd-display="">Pilih kelas...</option>
@@ -85,3 +86,24 @@
     </div>	
 </section>
 @stop
+
+@push('scripts')
+<script>
+// HITUNG UMUR OTOMATIS
+function calculate_age(dob) { 
+    var diff_ms = Date.now() - dob.getTime();
+    var age_dt = new Date(diff_ms); 
+  
+    return Math.abs(age_dt.getUTCFullYear() - 1970);
+}
+
+$('#tgl_lahir').change(function() {
+    var tgl_lahir = $(this).val();
+    var umur = calculate_age(new Date(tgl_lahir));
+
+    $("#umur").val(umur)
+    $("#umur_read").text(umur + " tahun")
+ });
+
+</script>
+@endpush

@@ -36,7 +36,7 @@
 						
 							<div class="profile-detail">
 								<div class="profile-info">
-									<form action="/psb/terima" method="POST">
+									<form action="/psb/{{$data_wawancara->pendaftaran_id}}/terima" method="POST">
 									{{csrf_field()}}
 										<h4 class="heading">Biodata</h4>
 										<ul class="list-unstyled list-justify">
@@ -156,7 +156,7 @@
 											<br>
 											<div class="text-left">
 												<button class="btn btn-warning btn-sm">Edit</button>
-												<a href="/psb/{{$data_wawancara->id}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('Data santri yang ditolak akan dihapus. Apakah anda yakin?')">Tolak</a>
+												<a href="/psb/{{$data_wawancara->pendaftaran_id}}/tolak" class="btn btn-danger btn-sm" onclick="return confirm('Data santri akan ditolak. Apakah anda yakin?')">Tolak</a>
 											</div>
 										</form>
                                     </div>

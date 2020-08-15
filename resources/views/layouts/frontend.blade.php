@@ -164,6 +164,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 			<script src="{{asset('frontend')}}/js/jquery.nice-select.min.js"></script>	
 			<script src="{{asset('frontend')}}/js/owl.carousel.min.js"></script>									
 			<script src="{{asset('frontend')}}/js/mail-script.js"></script>	
-			<script src="{{asset('frontend')}}/js/main.js"></script>	
+			<script src="{{asset('frontend')}}/js/main.js"></script>
+			
+			@stack('scripts')
 		</body>
 	</html>

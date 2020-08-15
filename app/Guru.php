@@ -12,6 +12,6 @@ class Guru extends Model
 
     public function relasi_halaqoh()
     {
-        return $this->hasMany('App\Halaqoh', 'guru_id', 'id');
+        return $this->hasOne('App\Halaqoh', 'guru_id', 'id');
     }
 }
