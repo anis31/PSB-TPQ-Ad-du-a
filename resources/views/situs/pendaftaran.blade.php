@@ -76,7 +76,7 @@
                     </select>
                     <textarea name="alamat" class="form-control col-lg-12 mb-20" id="alamat" placeholder="Masukkan Alamat Jl...." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Masukkan Alamat'" required="" rows="3"></textarea>
                     <input name="nama_ortu" type="text" class="form-control col-lg-6 mb-20" id="nama_ortu" placeholder="Nama Orang tua/wali" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nama Orang tua/wali'" required="">
-                    <input name="nomor_hp" type="text" class="form-control col-lg-6 mb-20" id="nomor_hp" placeholder="No HP/WhatsApp" onfocus="this.placeholder = ''" onblur="this.placeholder = 'No HP/WhatsApp'" required="">
+                    <input name="nomor_hp" type="number" min="0" class="form-control col-lg-6 mb-20" id="nomor_hp" placeholder="No HP/WhatsApp" onfocus="this.placeholder = ''" onblur="this.placeholder = 'No HP/WhatsApp'" required="">
                     <button type="submit" class="primary-btn text-uppercase mb-70">Daftar</button>
                 </div>
             </form>

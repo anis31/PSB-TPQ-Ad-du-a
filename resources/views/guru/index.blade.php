@@ -29,10 +29,11 @@
                                                 <th>No</th>
                                                 <th>Nama Lengkap</th>
                                                 <th>Umur</th>
+                                                <th>Nomor HP</th>
                                                 <th>L/P</th>
                                                 <th>Tahfizh</th>
                                                 <th>Tartil</th>
-                                                <th>Aksi</th>
+                                                <!-- <th>Aksi</th> -->
 											</tr>
 										</thead>
 										<tbody>
@@ -41,13 +42,14 @@
                                             <td>{{ $guru + $data_guru ->firstitem() }}</td>
                                             <td>{{$hasil->nama}}</td>
                                             <td>{{$hasil->umur}}</td>
+                                            <td>{{$hasil->no_hp}}</td>
                                             <td>{{$hasil->jenis_kelamin}}</td>
                                             <td>{{$hasil->tahfidz}}</td>
                                             <td>{{$hasil->tartil}}</td>
-                                            <td>
+                                            <!-- <td>
                                                 <a href="#" class="btn btn-warning btn-xs"><i class="lnr lnr-pencil"></i></a>
                                                 <a href="#" class="btn btn-danger btn-xs" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')"><i class="lnr lnr-trash"></i></a>
-                                            </td>
+                                            </td> -->
                                         </tr>
                                         @endforeach
 										</tbody>
@@ -74,10 +76,15 @@
         <div class="modal-body">
         <form action="/guru/tambah" method="POST">
             {{csrf_field()}}
-            
-            <div class="form-grup col-md-12">
+            <div class="form-row">
+                <div class="form-group col-md-6">
                 <label for="nama">Nama Lengkap</label>
-                <input name="nama" type="text" class='form-control' id="nama">
+                <input name="nama" type="text" class="form-control" id="nama">
+                </div>
+                <div class="form-group col-md-6">
+                <label for="jenis_kelamin">Nomor HP</label>
+                <input name="no_hp" type="number" min="0" class="form-control" id="no_hp">
+                </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">

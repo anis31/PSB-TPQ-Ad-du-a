@@ -19,15 +19,19 @@
 							<!-- Panel Atur pendaftaran -->
 							<div class="panel">
 								<div class="panel-heading">
-									<h3 class="panel-title">Form Pendaftaran</h3>
+									<!-- FUNCTION UNTUK MEMBUKA DAN MENUTUP FORM -->
+									@if($app->value === "1")
+									<h4>
+										Status pendaftaran saat ini sedang <strong>DIBUKA</strong>
+									</h4>
+									@else
+									<h4>
+										Status pendaftaran saat ini sedang <strong>DITUTUP</strong>
+									</h4>
+									@endif
+									<!-- END FUNCTION UNTUK MEMBUKA DAN MENUTUP FORM -->
 								</div>
 								<div class="panel-body">
-
-									@if($app->value === "1")
-										buka
-									@else
-										tutup
-									@endif
 									<p class="demo-button">
 										<button type="button" class="btn btn-success btn-pendaftaran" data-status="1">Buka</button>
 										<button type="button" class="btn btn-danger btn-pendaftaran" data-status="0">Tutup</button>

@@ -15,6 +15,7 @@
                         class="btn btn-success" 
                         data-toggle="modal" 
                         data-target="#modalTambah_data_halaqoh">Tambah</button>
+                        Klik untuk menambahkan halaqoh baru
                 </p>
             </div>
         </div>
@@ -29,23 +30,25 @@
                         <ul class="list-unstyled list-justify">
                             <li>Pengajar <span>{{ $data->relasi_guru['nama'] }}</span></li>
                             <li>Nomor HP <span>{{ $data->relasi_guru['no_hp'] }}</span></li>
-                            <li type="button" class="btn btn-sm btn-success tambah-santri" data-id="{{$data->id}}" data-nomor="{{$data->nomor_halaqoh}}" data-kode="{{$data->kode_halaqoh}}">Tambah</li>
+                            <li type="button" class="btn btn-xs btn-info tambah-santri fa fa-plus-square" data-id="{{$data->id}}" data-nomor="{{$data->nomor_halaqoh}}" data-kode="{{$data->kode_halaqoh}}"></li>
                             
                         </ul>
                     </div>
                     <div class="panel-body">
                         <table class="table table-hover">
-                        <?php
-                            $hitung = 1;
-
-                        ?>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama</th>
+                            <th>Aksi</th>
+                        </tr>
+                        <?php $hitung = 1; ?>
                         @foreach ($data->relasi_santri as $santri)
                         <tr>
                             <td>{{$hitung}}</td>
                             <td>{{$santri->nama}}</td>
                             <td>
                             <button type="button" 
-                                class="btn btn-sm btn-warning edit-santri lnr lnr-pencil" 
+                                class="btn btn-xs btn-warning edit-santri lnr lnr-pencil" 
                                 data-id="{{$santri->id}}"
                                 data-nama="{{$santri->nama}}"
                                 data-halaqoh="Halaqoh {{$data->nomor_halaqoh.''.$data->kode_halaqoh}}">

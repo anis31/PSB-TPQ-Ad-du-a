@@ -37,7 +37,8 @@
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label for="umur">Umur</label>
-                                                <input name="umur" type="text" class="form-control" id="umur" value="{{$santri->umur}}">
+                                                <input hidden name="umur" type="text" id="umur">
+                                                <span class="form-control col-lg-6 mb-20" id="umur_read"></span>
                                             </div>
                                         </div>
 
@@ -96,5 +97,23 @@
 </div>
 @stop
 
+@push('scripts')
+<script>
+// HITUNG UMUR OTOMATIS
+function calculate_age(dob) { 
+    var diff_ms = Date.now() - dob.getTime();
+    var age_dt = new Date(diff_ms); 
+  
+    return Math.abs(age_dt.getUTCFullYear() - 1970);
+}
 
+$('#tgl_lahir').change(function() {
+    var tgl_lahir = $(this).val();
+    var umur = calculate_age(new Date(tgl_lahir));
 
+    $("#umur").val(umur)
+    $("#umur_read").text(umur + " tahun")
+ });
+
+</script>
+@endpush
