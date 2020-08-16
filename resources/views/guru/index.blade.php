@@ -77,19 +77,26 @@
         <form action="/guru/tambah" method="POST">
             {{csrf_field()}}
             <div class="form-row">
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-12">
                 <label for="nama">Nama Lengkap</label>
                 <input name="nama" type="text" class="form-control" id="nama">
-                </div>
-                <div class="form-group col-md-6">
-                <label for="jenis_kelamin">Nomor HP</label>
-                <input name="no_hp" type="number" min="0" class="form-control" id="no_hp">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                <label for="umur">Umur</label>
-                <input name="umur" type="text" class="form-control" id="umur">
+                    <label for="jenis_kelamin">Nomor HP</label>
+                    <input name="no_hp" type="number" min="0" class="form-control" id="no_hp">
+                </div>
+                <div class="form-group col-md-6">
+                <label for="tgl_lahir" class="col-md-6">Tanggal lahir</label>
+                    <input name="tgl_lahir" type="date" class="form-control col-lg-6 mb-20" id="tgl_lahir" required="">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="umur">Umur</label>
+                    <input hidden name="umur" type="text" id="umur">
+                    <span class="form-control col-lg-6 mb-20" id="umur_read"></span>
                 </div>
                 <div class="form-group col-md-6">
                 <label for="jenis_kelamin">Jenis Kelamin</label>
@@ -129,3 +136,23 @@
 
 @stop
 
+@push('scripts')
+<script>
+// HITUNG UMUR OTOMATIS
+function calculate_age(dob) { 
+    var diff_ms = Date.now() - dob.getTime();
+    var age_dt = new Date(diff_ms); 
+  
+    return Math.abs(age_dt.getUTCFullYear() - 1970);
+}
+
+$('#tgl_lahir').change(function() {
+    var tgl_lahir = $(this).val();
+    var umur = calculate_age(new Date(tgl_lahir));
+
+    $("#umur").val(umur)
+    $("#umur_read").text(umur + " tahun")
+ });
+
+</script>
+@endpush
