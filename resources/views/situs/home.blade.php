@@ -13,9 +13,9 @@
 								Website TPQ Ad-Du'a			
 							</h1>
 							<p class="pt-10 pb-10">
-								In the history of modern astronomy, there is probably no one greater leap forward than the building and launch of the space telescope known as the Hubble.
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ullamcorper fringilla nulla, a congue mauris lacinia sed. Integer diam libero, semper quis fringilla vel, lacinia.
 							</p>
-							<a href="#" class="primary-btn text-uppercase">Get Started</a>
+							<a href="#" class="primary-btn text-uppercase">Profil TPQ</a>
 						</div>										
 					</div>
 				</div>					
@@ -33,8 +33,8 @@
 								</div>
 								<div class="desc-wrap">
 									<p>
-										Usage of the Internet is becoming more common due to rapid advancement
-										of technology.
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										Fusce facilisis ullamcorper nisi. Phasellus accumsan tellus.
 									</p>
 									<a href="#">selengkapnya</a>									
 								</div>
@@ -47,7 +47,8 @@
 								</div>
 								<div class="desc-wrap">
 									<p>
-										For many of us, our very first experience of learning about the celestial bodies begins when we saw our first.
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										Fusce facilisis ullamcorper nisi. Phasellus accumsan tellus.
 									</p>
 									<a href="#">selengkapnya</a>									
 								</div>
