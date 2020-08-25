@@ -33,6 +33,7 @@ Route::group(['middleware' => 'auth'],function(){
     Route::get('/daftar','DashboardController@daftar');
     Route::get('/psb/{id}/profil','DashboardController@profil');
     Route::get('/psb/wawancara','DashboardController@wawancara');
+    Route::get('/laporan','DashboardController@laporan');
     
     // Route PSB
     Route::get('/psb/insert_wawancara','PsbController@index');

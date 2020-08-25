@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 Use App\Wawancara;
 Use App\Daftar;
 Use App\Santri;
+Use App\Periode;
 
 class PsbController extends Controller
 {
@@ -67,6 +68,12 @@ class PsbController extends Controller
     {
         $data_santri = Santri::paginate(10);
         return view('psb/pengumuman', ['data_santri' => $data_santri])->with('sukses','Data berhasil ditambahkan..');
+    }
+
+    public function periode(Request $request)
+    {
+        Periode::create($request->all());
+        return view('psb/periode');
     }
 
 }

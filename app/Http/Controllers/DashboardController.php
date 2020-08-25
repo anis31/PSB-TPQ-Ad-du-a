@@ -54,6 +54,19 @@ class DashboardController extends Controller
         return view('psb.wawancara',['data_wawancara'=> $data_wawancara]);
     }
 
-    
+    public function laporan(Request $request)
+    {
+        $years = range(date("Y"), 2018);
+
+        $data_pendaftaran = Daftar::when($request->has('periode'), function($query) use($request){
+            return $query->whereYear('created_at',$request->periode);
+        })->paginate(8);  
+        $app = App::where('key', 'STATUS_PENDAFTARAN')->firstOrFail();
+        return view('dashboards.laporan', [
+            'data_pendaftaran' => $data_pendaftaran,
+            'app' => $app,
+            'years' => $years
+        ]);
+    }
 
 }
