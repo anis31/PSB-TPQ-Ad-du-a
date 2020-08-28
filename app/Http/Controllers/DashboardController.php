@@ -14,8 +14,21 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $data_pendaftaran = Daftar::all();
-        return view('dashboards.index', compact('data_pendaftaran'));
+        $data_laki = Daftar::where('jenis_kelamin','L')->count();
+        $data_perempuan = Daftar::where('jenis_kelamin','P')->count();
+        $jumlah_santri = Daftar::all()->count();
+        $data_ustadz = Guru::where('jenis_kelamin','L')->count();
+        $data_ustadzah = Guru::where('jenis_kelamin','P')->count();
+        $jumlah_guru = Guru::all()->count();
+        return view('dashboards.index', [
+            'data_laki' => $data_laki, 
+            'data_perempuan' => $data_perempuan, 
+            'jumlah_santri' => $jumlah_santri, 
+            'data_ustadz' => $data_ustadz,
+            'data_ustadzah' => $data_ustadzah,
+            'jumlah_guru' => $jumlah_guru,
+            
+        ]);
     }
 
     public function kelompok()

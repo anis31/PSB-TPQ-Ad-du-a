@@ -20,7 +20,7 @@
                                     <div class="metric">
                                         <span class="icon"><i class="fa fa-male"></i></span>
                                         <p>
-                                            <span class="number">30</span>
+                                            <span class="number">{{$data_laki}}</span>
                                             <span class="title">Laki-Laki</span>
                                         </p>
                                     </div>
@@ -29,7 +29,7 @@
                                     <div class="metric">
                                         <span class="icon"><i class="fa fa-female"></i></span>
                                         <p>
-                                            <span class="number">35</span>
+                                            <span class="number">{{$data_perempuan}}</span>
                                             <span class="title">Perempuan</span>
                                         </p>
                                     </div>
@@ -41,7 +41,7 @@
                                     <div class="metric">
                                         <span class="icon"><i class="fa fa-bar-chart"></i></span>
                                         <p>
-                                            <span class="number text-success">65</span>
+                                            <span class="number text-success">{{$jumlah_santri}}</span>
                                             <span class="title text-success">Total</span>
                                         </p>
                                     </div>
@@ -64,7 +64,7 @@
                                     <div class="metric">
                                         <span class="icon"><i class="fa fa-male"></i></span>
                                         <p>
-                                            <span class="number">10</span>
+                                            <span class="number">{{$data_ustadz}}</span>
                                             <span class="title">Ustadz</span>
                                         </p>
                                     </div>
@@ -73,7 +73,7 @@
                                     <div class="metric">
                                         <span class="icon"><i class="fa fa-female"></i></span>
                                         <p>
-                                            <span class="number">12</span>
+                                            <span class="number">{{$data_ustadzah}}</span>
                                             <span class="title">Ustadzah</span>
                                         </p>
                                     </div>
@@ -85,7 +85,7 @@
                                     <div class="metric">
                                         <span class="icon"><i class="fa fa-bar-chart"></i></span>
                                         <p>
-                                            <span class="number text-success">22</span>
+                                            <span class="number text-success">{{$jumlah_guru}}</span>
                                             <span class="title text-success">Total</span>
                                         </p>
                                     </div>
