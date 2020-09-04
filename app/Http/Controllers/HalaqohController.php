@@ -37,6 +37,13 @@ class HalaqohController extends Controller
 
         return response()->json('Berhasil menyimpan data halaqoh');
     }
+
+    public function hapus_guru($id)
+    {
+        $guru = Guru::find($id);
+        $guru->delete();
+        return redirect('/kelompok')->with('sukses','Data halaqoh berhasil dihapus..');
+    }
     
 
 }

@@ -9,7 +9,7 @@
         <div class="row d-flex align-items-center justify-content-center">
             <div class="about-content col-lg-12">
                 <h1 class="text-white">
-                    Pendaftaran				
+                    Pendaftaran Ditutup				
                 </h1>	
                 <p class="text-white link-nav"><a href="/">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="/pendaftaran"> Pendaftaran</a></p>
             </div>	
@@ -47,7 +47,7 @@
                 </p>
             </div>
             <div class="col-lg-6 col-md-6 search-course-right">
-                <h3>MOHON MAAF, PENDAFTARAN SUDAH DITUTUP</h3>
+                <h3 class="text-center">MOHON MAAF,<br> PENDAFTARAN SUDAH DITUTUP</h3>
             </div>
         </div>
     </div>	

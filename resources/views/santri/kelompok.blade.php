@@ -26,12 +26,12 @@
                 <!-- TABLE HOVER -->
                 <div class="panel">
                     <div class="panel-heading">
-                        <h3 class="heading">Halaqoh {{ $data->nomor_halaqoh }}{{ $data->kode_halaqoh }}</span></h3>
+                        <h3 class="heading">Halaqoh {{ $data->nomor_halaqoh }}{{ $data->kode_halaqoh }}</h3>
                         <ul class="list-unstyled list-justify">
                             <li>Pengajar <span>{{ $data->relasi_guru['nama'] }}</span></li>
                             <li>Nomor HP <span>{{ $data->relasi_guru['no_hp'] }}</span></li>
-                            <li type="button" class="btn btn-xs btn-info tambah-santri fa fa-plus-square" data-id="{{$data->id}}" data-nomor="{{$data->nomor_halaqoh}}" data-kode="{{$data->kode_halaqoh}}"></li>
-                            
+                            <a href="#" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')"><i class="lnr lnr-trash"></i></a>
+                            <li type="button" class="btn btn-xs btn-info tambah-santri lnr lnr-users" data-id="{{$data->id}}" data-nomor="{{$data->nomor_halaqoh}}" data-kode="{{$data->kode_halaqoh}}"></li>
                         </ul>
                     </div>
                     <div class="panel-body">

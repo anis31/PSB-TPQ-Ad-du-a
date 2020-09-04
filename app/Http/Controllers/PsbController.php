@@ -38,11 +38,11 @@ class PsbController extends Controller
     {
         $profil_pendaftar = Daftar::find($id);
         $profil_pendaftar->update($request->all());
-        if ($request->hasFile('photo')){
-            $request->file('photo')->move(public_path('images'), $request->file('photo')->getClientOriginalName());
-            $profil_pendaftar->photo = $request->file('photo')->getClientOriginalName();
-            $profil_pendaftar->save();
-        }
+        // if ($request->hasFile('photo')){
+        //     $request->file('photo')->move(public_path('images'), $request->file('photo')->getClientOriginalName());
+        //     $profil_pendaftar->photo = $request->file('photo')->getClientOriginalName();
+        //     $profil_pendaftar->save();
+        // }
         return redirect('/daftar')->with('sukses','Data berhasil diperbarui');
     }
 

@@ -17,7 +17,7 @@
                             <!-- Panel Quran -->
                             <h3 class="btn-primary btn-block text-center">Form Quran</h3>
                             <div class="form-group row">
-                                <label for="nama" class="col-sm-7">Pilih Nama Santri</label>
+                                <label for="nama" class="col-sm-7">Pilih Nama Pendaftar</label>
                                 <div class="col-sm-5">
 
                                 <select name="pendaftaran_id" id="pendaftaran_id" class="form-control">
@@ -30,7 +30,7 @@
                             <div class="form-group row">
                                 <label class="col-sm-9">Apakah ananda sudah mempunyai hafalan ?</label>
                                 <div class="col-sm-3">
-                                <select name="hafalan" id="hafalan" class="form-control">
+                                <select name="hafalan" id="hafalan" class="form-control" required>
                                     <option datd-display="">pilih...</option>
                                     <option value="Sudah">Sudah</option>
                                     <option value="Belum">Belum</option>
@@ -47,7 +47,7 @@
                             <div class="form-group row">
                                 <label class="col-sm-9">Apakah ananda sudah bisa membaca Al Quran ?</label>
                                 <div class="col-sm-3">
-                                <select name="tartil" id="tartil" class="form-control">
+                                <select name="tartil" id="tartil" class="form-control" required>
                                     <option datd-display="">pilih...</option>
                                     <option value="Sudah">Sudah</option>
                                     <option value="Belum">Belum</option>

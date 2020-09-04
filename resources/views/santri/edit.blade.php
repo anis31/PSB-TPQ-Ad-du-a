@@ -37,8 +37,7 @@
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label for="umur">Umur</label>
-                                                <input hidden name="umur" type="text" id="umur">
-                                                <span class="form-control col-lg-6 mb-20" id="umur_read"></span>
+                                                <input name="umur" type="text" class="form-control" id="umur" value="{{$santri->umur}}" readonly>
                                             </div>
                                         </div>
 

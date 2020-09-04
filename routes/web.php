@@ -61,6 +61,7 @@ Route::group(['middleware' => 'auth'],function(){
     // Route Halaqoh
     Route::post('/halaqoh/simpan-santri','HalaqohController@simpanSantri');
     Route::post('/halaqoh/simpan','HalaqohController@simpanHalaqoh');
+    Route::get('/halaqoh/hapus_guru','HalaqohController@hapus_guru');
     
     // Route Setting Aplikasi
     Route::post('/app/edit-pendaftaran','AppController@editPendaftaran');
