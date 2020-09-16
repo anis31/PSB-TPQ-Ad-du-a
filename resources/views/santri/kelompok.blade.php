@@ -30,7 +30,7 @@
                         <ul class="list-unstyled list-justify">
                             <li>Pengajar <span>{{ $data->relasi_guru['nama'] }}</span></li>
                             <li>Nomor HP <span>{{ $data->relasi_guru['no_hp'] }}</span></li>
-                            <a href="#" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')"><i class="lnr lnr-trash"></i></a>
+                            <!-- <a href="#" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')"><i class="lnr lnr-trash"></i></a> -->
                             <li type="button" class="btn btn-xs btn-info tambah-santri lnr lnr-users" data-id="{{$data->id}}" data-nomor="{{$data->nomor_halaqoh}}" data-kode="{{$data->kode_halaqoh}}"></li>
                         </ul>
                     </div>
@@ -155,12 +155,9 @@
                                         <div class="form-group row">
                                             <label class="col-sm-6">Nama Santri</label>
                                             <div class="col-sm-6">
-                                            <select class="form-control" id="pilih_santri">
-                                                <option datd-display="">pilih...</option>
-                                                @foreach($santri_unlisted as $santri)
-                                                <option value="{{$santri->id}}" data-umur="{{$santri->umur}}" data-jk="{{$santri->jenis_kelamin}}"> {{$santri->nama}}</option>
-                                                @endforeach
-                                            </select>
+                                                <div id="santri_unlisted">
+
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group row">
@@ -288,14 +285,7 @@ $('#btn_submit_halaqoh').click(function(e) {
     });
 
 // DROPDOWN DATA SANTRI
-    $('#pilih_santri').change(function() {
-        var umur=$(this).find(':selected').data('umur')
-        var jk=$(this).find(':selected').data('jk')
-
-        $('#pilih_santri_umur').text(umur+' tahun')
-        $('#pilih_santri_jk').text(jk)
-    });
-
+    
 // GET TAMBAH DATA SANTRI
     $('.tambah-santri').click(function(e) {
         var id=$(this).data('id')
@@ -305,7 +295,9 @@ $('#btn_submit_halaqoh').click(function(e) {
         $('#pilih_santri_halaqoh_id').val(id);
         $('#nama_kelompok').text('Halaqoh '+nomor+kode);
 
+        getDataSantri(kode);
         $('#modalTambah_data_santri').modal('show')
+
     });
 // ACTION SIMPAN DATA SANTRI KE HALAQOH
     $('#btn_submit_santri').click(function(e) {
@@ -401,6 +393,46 @@ $('#btn_submit_halaqoh').click(function(e) {
             
         })
     });
+
+    function getDataSantri(kode){
+        $.ajax({
+            type: 'GET',
+            url: '{{url("/halaqoh/santri-available")}}?kode='+kode,
+            
+            success: function(response){
+                $('#santri_unlisted').html(response)
+
+                $('#pilih_santri').change(function() {
+                    var umur=$(this).find(':selected').data('umur')
+                    var jk=$(this).find(':selected').data('jk')
+
+                    $('#pilih_santri_umur').text(umur+' tahun')
+                    $('#pilih_santri_jk').text(jk)
+                });
+
+            },
+            error: function (jqXHR, exception) {
+                var msg = '';
+                if (jqXHR.status === 0) {
+                    msg = 'Not connect.\n Verify Network.';
+                } else if (jqXHR.status == 404) {
+                    msg = 'Requested page not found. [404]';
+                } else if (jqXHR.status == 500) {
+                    msg = 'Internal Server Error [500].';
+                } else if (exception === 'parsererror') {
+                    msg = 'Requested JSON parse failed.';
+                } else if (exception === 'timeout') {
+                    msg = 'Time out error.';
+                } else if (exception === 'abort') {
+                    msg = 'Ajax request aborted.';
+                } else {
+                    msg = 'Uncaught Error.\n' + jqXHR.responseText;
+                }
+                alert(msg);
+            }
+            
+        })
+    }
 
 </script>
 @endpush

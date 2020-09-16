@@ -13,9 +13,9 @@ class SantriController extends Controller
     public function index(Request $request)
     {
         if($request->has('cari')){
-            $data_santri = Santri::where('nama','LIKE','%'.$request->cari.'%')->get();
+            $data_santri = Santri::whereNull('lulus')->where('nama','LIKE','%'.$request->cari.'%')->get();
         }else{
-            $data_santri = Santri::paginate(10);
+            $data_santri = Santri::whereNull('lulus')->paginate(10);
         }
         return view('santri.index', ['data_santri' => $data_santri]);
     }
@@ -52,5 +52,15 @@ class SantriController extends Controller
     {
         $santri = Santri::find($id);
         return view('santri.profil',['santri' => $santri]);
+    }
+    
+    public function lulus($id)
+    {
+        $santri = Santri::findOrFail($id);
+        $santri->lulus = 'LULUS';
+        $santri->save();
+
+        return redirect('/santri/'.$id.'/profil')->with('sukses','Santri telah dipindah ke data Alumni..');
+        
     }
 }

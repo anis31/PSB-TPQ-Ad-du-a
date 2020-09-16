@@ -18,7 +18,10 @@ class PsbController extends Controller
 
     public function index() //Dropdown function
     {
-        $list_pendaftar = Daftar::select('id', 'nama')->whereNull('status')->get();
+        $list_pendaftar = Daftar::select('id', 'nama')
+        ->whereNull('status')
+        ->whereDoesntHave('relasi_wawancara')
+        ->get();
         return view('psb.insert_wawancara', compact('list_pendaftar'));
     }
 

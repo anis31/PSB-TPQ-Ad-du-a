@@ -16,17 +16,23 @@ class DashboardController extends Controller
     {
         $data_laki = Daftar::where('jenis_kelamin','L')->count();
         $data_perempuan = Daftar::where('jenis_kelamin','P')->count();
-        $jumlah_santri = Daftar::all()->count();
+        $jumlah_pendaftar = Daftar::all()->count();
         $data_ustadz = Guru::where('jenis_kelamin','L')->count();
         $data_ustadzah = Guru::where('jenis_kelamin','P')->count();
         $jumlah_guru = Guru::all()->count();
+        $data_santri_L = Santri::where('jenis_kelamin','L')->count();
+        $data_santri_P = Santri::where('jenis_kelamin','P')->count();
+        $jumlah_santri = Santri::all()->count();
         return view('dashboards.index', [
             'data_laki' => $data_laki, 
             'data_perempuan' => $data_perempuan, 
-            'jumlah_santri' => $jumlah_santri, 
+            'jumlah_pendaftar' => $jumlah_pendaftar, 
             'data_ustadz' => $data_ustadz,
             'data_ustadzah' => $data_ustadzah,
             'jumlah_guru' => $jumlah_guru,
+            'data_santri_L' => $data_santri_L,
+            'data_santri_P' => $data_santri_P,
+            'jumlah_santri' => $jumlah_santri,
             
         ]);
     }

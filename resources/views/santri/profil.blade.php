@@ -6,6 +6,14 @@
 			<div class="main-content">
 				<div class="container-fluid">
 					<div class="panel panel-profile">
+						<!-- Alert -->
+						@if(Session::has('sukses'))
+                        <div class="alert alert-success alert-dismissible" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                            <i class="fa fa-check-circle"></i> {{ Session::get('sukses') }}
+                        </div>
+						@endif
+						<!-- End Of Alert -->
 						<div class="clearfix">
 							<!-- LEFT COLUMN -->
 							<div class="profile-left">
@@ -45,7 +53,10 @@
 											<li>Alamat <span>{{$santri->alamat}}</span></li>
 										</ul>
 									</div>
-									<div class="text-center"><a href="/psb/{{$santri->id}}/edit" class="btn btn-primary">Edit Profile</a></div>
+									<div class="row">
+										<a href="/santri/{{$santri->id}}/lulus" class="btn btn-danger" onclick="return confirm('Apakah ananda memang sudah lulus dari TPQ?')">Lulus</a>
+										<a href="/psb/{{$santri->id}}/edit" class="btn btn-primary">Edit Profile</a>
+									</div>
 								</div>
 								<!-- END PROFILE DETAIL -->
 							</div>

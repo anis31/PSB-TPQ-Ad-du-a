@@ -155,7 +155,7 @@
 												placeholder="{{$data_wawancara->catatan_quran}}" rows="5" disabled></textarea>
 											<br>
 											<div class="text-left">
-												<button class="btn btn-warning btn-sm">Edit</button>
+												<!-- <button class="btn btn-warning btn-sm">Edit</button> -->
 												<a href="/psb/{{$data_wawancara->pendaftaran_id}}/tolak" class="btn btn-danger btn-sm" onclick="return confirm('Data santri akan ditolak. Apakah anda yakin?')">Tolak</a>
 											</div>
 										</form>

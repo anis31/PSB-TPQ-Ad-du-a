@@ -45,5 +45,33 @@ class HalaqohController extends Controller
         return redirect('/kelompok')->with('sukses','Data halaqoh berhasil dihapus..');
     }
     
+    public function getSantriAvailable(Request $request)
+    {
+        $santri_unlisted = Santri::whereNull('halaqoh_id')
+        ->when($request->kode === "A", function($query) {
+            $query->where('jenis_kelamin', 'L');
+        })
+        ->when($request->kode === "B", function($query) {
+            $query->where('jenis_kelamin', 'P');
+        })
+        ->get();
+        $data = "
+        <select class='form-control' id='pilih_santri'>
+            <option datd-display=''>pilih...</option>
+        ";
+
+        foreach($santri_unlisted as $value){
+            $data .= "
+            <option value='".$value->id."' data-umur='".$value->umur."' data-jk='".$value->jenis_kelamin."'>
+            ".$value->nama."
+            </option>
+            ";
+        }
+
+        $data .= "</select>
+        ";
+
+        return $data;
+    }
 
 }

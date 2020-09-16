@@ -34,6 +34,7 @@ Route::group(['middleware' => 'auth'],function(){
     Route::get('/psb/{id}/profil','DashboardController@profil');
     Route::get('/psb/wawancara','DashboardController@wawancara');
     Route::get('/laporan','DashboardController@laporan');
+    Route::get('/alumni','AlumniController@index');
     
     // Route PSB
     Route::get('/psb/insert_wawancara','PsbController@index');
@@ -52,6 +53,7 @@ Route::group(['middleware' => 'auth'],function(){
     Route::post('/santri/{id}/update','SantriController@update');
     Route::get('/santri/{id}/delete', 'SantriController@delete');
     Route::get('/santri/{id}/profil','SantriController@profil');
+    Route::get('/santri/{id}/lulus','SantriController@lulus');
 
 
     // Route GURU
@@ -62,6 +64,8 @@ Route::group(['middleware' => 'auth'],function(){
     Route::post('/halaqoh/simpan-santri','HalaqohController@simpanSantri');
     Route::post('/halaqoh/simpan','HalaqohController@simpanHalaqoh');
     Route::get('/halaqoh/hapus_guru','HalaqohController@hapus_guru');
+    Route::get('/halaqoh/santri-available','HalaqohController@getSantriAvailable');
+    
     
     // Route Setting Aplikasi
     Route::post('/app/edit-pendaftaran','AppController@editPendaftaran');
